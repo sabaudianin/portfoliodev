@@ -70,20 +70,20 @@ export const Navbar = () => {
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-none"
             >
-              <span className="absolute -inset-1.5"></span>
-              <span className="sr-only">View notifications</span>
               <svg
-                className="size-6"
-                fill="none"
+                className="w-6 h-6"
+                fill="currentColor"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="48"
+                  height="48"
+                  fill="currentColor"
+                >
+                  <path d="M12 3a1 1 0 011 1v2a1 1 0 01-2 0V4a1 1 0 011-1zm5.657 3.343a1 1 0 010 1.414l-1.414 1.414a1 1 0 11-1.414-1.414l1.414-1.414a1 1 0 011.414 0zM21 11a1 1 0 110 2h-2a1 1 0 110-2h2zM17.657 17.657a1 1 0 01-1.414 0l-1.414-1.414a1 1 0 011.414-1.414l1.414 1.414a1 1 0 010 1.414zM12 19a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zm-5.657-1.343a1 1 0 010-1.414l1.414-1.414a1 1 0 011.414 1.414L7.757 17.657a1 1 0 01-1.414 0zM5 11a1 1 0 110 2H3a1 1 0 110-2h2zM6.343 6.343a1 1 0 011.414 0l1.414 1.414A1 1 0 117.757 9.17L6.343 7.757a1 1 0 010-1.414zM12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg>
               </svg>
             </button>
             <div className="relative ml-3">
@@ -94,11 +94,11 @@ export const Navbar = () => {
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>
-                  {/* <img
+                  <img
                     className="size-8 rounded-full"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="User"
-                  /> */}
+                  />
                 </button>
               </div>
             </div>
