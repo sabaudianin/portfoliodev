@@ -6,13 +6,13 @@ import Image from "next/image";
 export const Navbar = () => {
   return (
     <nav className="bg-gray-800 ">
-      <div className="mx-auto max-w-7xl py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl py-4 sm:px-16">
         <div className="relative flex items-center justify-between ">
           <MenuHamburger />
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center -translate-x-1/2">
-              <p className="font-bold text-white">Rafal Bobko</p>
+              <p className="font-bold text-white ">Rafal Bobko</p>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <MenuLinks />
