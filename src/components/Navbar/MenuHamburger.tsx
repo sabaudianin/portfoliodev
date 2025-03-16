@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function MenuHamburger() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+const MenuHamburger: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
     <div className="relative sm:hidden">
@@ -16,7 +17,7 @@ export default function MenuHamburger() {
         aria-expanded={isOpen}
         onClick={toggleMenu}
       >
-        <span className="sr-only">Open main menu</span>
+        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
         {isOpen ? (
           <svg
             className="block size-8"
@@ -24,6 +25,7 @@ export default function MenuHamburger() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -38,6 +40,7 @@ export default function MenuHamburger() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -49,30 +52,42 @@ export default function MenuHamburger() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 w-screen bg-gray-800 shadow-lg">
-          <div className="flex flex-col space-y-1 px-4 py-3">
-            <Link
-              href="/"
-              className="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-900"
-              aria-current="page"
-            >
-              Home
-            </Link>
-            <Link
-              href="/myProjects"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/aboutMe"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              About Me
-            </Link>
-          </div>
-        </div>
+        <nav
+          id="mobile-menu"
+          className="absolute top-full left-0 w-screen bg-gray-800 shadow-lg transition-opacity duration-200 ease-in-out"
+          role="navigation"
+        >
+          <ul className="flex flex-col space-y-1 px-4 py-3">
+            <li>
+              <Link
+                href="/"
+                className="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-900"
+                aria-current="page"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/myProjects"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/aboutMe"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                About Me
+              </Link>
+            </li>
+          </ul>
+        </nav>
       )}
     </div>
   );
-}
+};
+
+export default MenuHamburger;
