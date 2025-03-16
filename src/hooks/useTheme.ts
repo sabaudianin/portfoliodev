@@ -10,13 +10,14 @@ export function useTheme() {
     const storedTheme = (localStorage.getItem("theme") as Theme) || "dark";
     setTheme(storedTheme);
     document.documentElement.classList.toggle("dark", storedTheme === "dark");
-  }, []);
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme: Theme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
+    console.log(theme);
   };
 
   return { theme, toggleTheme, mounted };
