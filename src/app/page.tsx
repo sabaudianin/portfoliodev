@@ -1,16 +1,10 @@
-import { Navbar } from "@/components/Navbar/Navbar";
 import Hero from "@/layouts/Hero/Hero";
+import { MainLayout } from "@/layouts/MainLayout/MainLayout";
+
 export default function Home() {
   return (
-    <>
-      <header className="min-w-sm">
-        <Navbar />
-      </header>
-      <main>
-        <Hero />
-        <p>TEKST TESTOWy</p>
-      </main>
-      <footer>Footer</footer>
-    </>
+    <MainLayout>
+      <Hero />
+    </MainLayout>
   );
 }
