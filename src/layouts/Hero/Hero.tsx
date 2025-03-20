@@ -6,7 +6,7 @@ export default function Hero() {
       className="w-full h-screen flex items-center justify-between overflow-x-hidden"
       aria-label="Hero section with introduction"
     >
-      <div className="p-8 mx-auto flex flex-col md:flex-row justify-between items-center h-full text-center">
+      <div className="p-8 mx-auto flex flex-col md:flex-row  items-center h-full text-center gap-8">
         <div className="text-white flex flex-col gap-4 justify-center md:w-1/2 w-full">
           <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold">
             Hi there, I am
@@ -33,12 +33,11 @@ export default function Hero() {
 
         <div className="relative md:w-1/2 w-full hidden md:flex justify-center">
           <Image
-            src="https://dl.dropboxusercontent.com/scl/fi/t3tzii5ck1e1mt7z54r9o/cvBlack.jpg?rlkey=stia4ramuhu1i4ejoc50q1try&st=t03doebf"
+            src="https://www.dropbox.com/scl/fi/rk2euib9rzjey7rkwg8q1/20250121_191332.png?rlkey=lpeccjsi3ofaglj6xfruobv1h&st=618n9cn1&raw=1"
             alt="Rafal Bobko"
             width={500}
             height={500}
             priority={true}
-            className="rounded-lg shadow-lg"
           />
         </div>
       </div>

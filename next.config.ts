@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dl.dropboxusercontent.com",
+        hostname: "www.dropbox.com",
         port: "",
         pathname: "/scl/fi/**",
       },

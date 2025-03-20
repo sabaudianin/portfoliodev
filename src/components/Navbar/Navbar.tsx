@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-gray-800 ">
+    <nav className=" bg-gradient-to-r from-blue-400 to-cyan-400 ">
       <div className="mx-auto max-w-7xl py-4 sm:px-16">
         <div className="relative flex items-center justify-between ">
           <MenuHamburger />
@@ -28,13 +28,13 @@ export const Navbar = () => {
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>
-                  <Image
+                  {/* <Image
                     className="size-8 rounded-full"
                     src="https://dl.dropboxusercontent.com/scl/fi/t3tzii5ck1e1mt7z54r9o/cvBlack.jpg?rlkey=stia4ramuhu1i4ejoc50q1try&st=t03doebf"
                     alt="User"
                     width={500}
                     height={500}
-                  />
+                  /> */}
                 </button>
               </div>
             </div>
