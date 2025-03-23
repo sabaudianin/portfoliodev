@@ -5,8 +5,8 @@ export const Links: Array<{
 }> = [
   {
     id: 1,
-    title: "Home",
-    url: "/",
+    title: "About Me",
+    url: "/about",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const Links: Array<{
   },
   {
     id: 3,
-    title: "About Me",
-    url: "/aboutMe",
+    title: "Contact",
+    url: "/contact",
   },
 ];

@@ -1,6 +1,12 @@
+"use client";
 import Image from "next/image";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function Hero() {
+  const { theme, mounted } = useTheme();
+
+  if (!mounted) return null;
+
   return (
     <section
       className="w-full h-screen flex items-center justify-between overflow-x-hidden"
@@ -33,11 +39,17 @@ export default function Hero() {
 
         <div className="relative md:w-1/2 w-full hidden md:flex justify-center">
           <Image
-            src="https://www.dropbox.com/scl/fi/rk2euib9rzjey7rkwg8q1/20250121_191332.png?rlkey=lpeccjsi3ofaglj6xfruobv1h&st=618n9cn1&raw=1"
+            key={theme}
+            src={
+              theme === "dark"
+                ? "https://www.dropbox.com/scl/fi/rk2euib9rzjey7rkwg8q1/20250121_191332.png?rlkey=lpeccjsi3ofaglj6xfruobv1h&st=618n9cn1&raw=1"
+                : "https://www.dropbox.com/scl/fi/kvy1tp80ii9j87zgjmkx7/20241030_103232.png?rlkey=ygixu34ykx75iqgpchgfroe1b&st=qi7gqltz&raw=1"
+            }
             alt="Rafal Bobko"
             width={500}
             height={500}
-            priority={true}
+            priority
+            className="rounded-lg shadow-lg"
           />
         </div>
       </div>

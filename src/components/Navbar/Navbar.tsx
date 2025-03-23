@@ -2,6 +2,7 @@ import MenuHamburger from "./MenuHamburger";
 import MenuLinks from "./MenuLinks";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
@@ -11,8 +12,10 @@ export const Navbar = () => {
           <MenuHamburger />
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center -translate-x-1/2">
-              <p className="font-bold text-white ">Rafal Bobko</p>
+            <div className="flex shrink-0 text-2xl font bold">
+              <Link href="/">
+                <p className="font-bold text-white p-2">Rafal Bobko</p>
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <MenuLinks />
@@ -24,7 +27,7 @@ export const Navbar = () => {
               <div>
                 <button
                   type="button"
-                  className="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-none"
+                  className="relative flex rounded-full bg-gray-800 text-sm "
                 >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>

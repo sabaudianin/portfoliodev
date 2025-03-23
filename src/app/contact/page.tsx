@@ -1,10 +1,10 @@
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
 
-export default function MyProjects() {
+export default function Contact() {
   return (
     <MainLayout>
       <section>
-        <p className="text-4xl">MY PROJECTSs</p>
+        <p className="text-4xl">CONTACT</p>
       </section>
     </MainLayout>
   );
