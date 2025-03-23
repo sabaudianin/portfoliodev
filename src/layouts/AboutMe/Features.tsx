@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function Features() {
   const features = [
     {
       title: "Education",
+      href: "/about#education",
       icon: (
         <svg
           width="24"
@@ -16,11 +18,14 @@ export default function Features() {
           <path d="M12 3L1 9l11 6 9-4.91v6.11h2V9L12 3zm0 13.09L3.74 10.5 2.6 11.26 12 17l9.4-5.74-1.14-.76L12 16.09z" />
         </svg>
       ),
-      description:
-        "B.Sc. in Computer Science, Jagiellonian University (2016–2020). Certified Frontend Developer (Meta, 2023).",
+      description: [
+        "CodersLab Szkoła It - JavaScript Developer (2023–2024).",
+        "Wyższa Szkoła Kształcenia Zawodowego - Back-end .NET (C#) Developer (2025–).",
+      ],
     },
     {
       title: "Skills",
+      href: "/about#skills",
       icon: (
         <svg
           width="24"
@@ -36,6 +41,7 @@ export default function Features() {
     },
     {
       title: "Experience",
+      href: "/about#experience",
       icon: (
         <svg
           width="24"
@@ -51,6 +57,7 @@ export default function Features() {
     },
     {
       title: "Projects",
+      href: "/about#projects",
       icon: (
         <svg
           width="24"
@@ -66,6 +73,7 @@ export default function Features() {
     },
     {
       title: "Goals",
+      href: "/about#goals",
       icon: (
         <svg
           width="24"
@@ -81,6 +89,7 @@ export default function Features() {
     },
     {
       title: "Approach",
+      href: "/about#approach",
       icon: (
         <svg
           width="24"
@@ -111,20 +120,34 @@ export default function Features() {
 
         <div className="w-full grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, idx) => (
-            <div
+            <Link
               key={idx}
-              className="text-center"
+              href={feature.href}
+              className="text-center group"
             >
-              <div className="w-fit mx-auto p-3 rounded-lg bg-white dark:bg-gray-950 ring-1 ring-inset ring-gray-200 dark:ring-gray-800 text-gray-950 dark:text-white">
+              <div className="w-fit mx-auto p-3 rounded-lg bg-white dark:bg-gray-950 ring-1 ring-inset ring-gray-200 dark:ring-gray-800 text-gray-950 dark:text-white group-hover:shadow-lg transition">
                 {feature.icon}
               </div>
               <h4 className="mt-4 mb-2 text-gray-950 dark:text-gray-50 text-lg font-bold lg:text-xl">
                 {feature.title}
               </h4>
-              <p className="text-base text-gray-950 dark:text-gray-50">
-                {feature.description}
-              </p>
-            </div>
+              {Array.isArray(feature.description) ? (
+                <ul className="space-y-1">
+                  {feature.description.map((desc, i) => (
+                    <li
+                      key={i}
+                      className="text-base text-gray-950 dark:text-gray-50"
+                    >
+                      {desc}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-base text-gray-950 dark:text-gray-50">
+                  {feature.description}
+                </p>
+              )}
+            </Link>
           ))}
         </div>
       </div>
