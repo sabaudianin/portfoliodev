@@ -11,10 +11,10 @@ export const Navbar = () => {
         <div className="relative flex items-center justify-between ">
           <MenuHamburger />
 
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 text-2xl font bold">
+          <div className="flex flex-1 items-center justify-between ">
+            <div className=" text-2xl font bold">
               <Link href="/">
-                <p className="font-bold text-white p-2">Rafal Bobko</p>
+                <p className="font-bold text-white ">Rafal Bobko</p>
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -23,24 +23,6 @@ export const Navbar = () => {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <ThemeToggle />
-            <div className="relative ml-3">
-              <div>
-                <button
-                  type="button"
-                  className="relative flex rounded-full bg-gray-800 text-sm "
-                >
-                  <span className="absolute -inset-1.5"></span>
-                  <span className="sr-only">Open user menu</span>
-                  {/* <Image
-                    className="size-8 rounded-full"
-                    src="https://dl.dropboxusercontent.com/scl/fi/t3tzii5ck1e1mt7z54r9o/cvBlack.jpg?rlkey=stia4ramuhu1i4ejoc50q1try&st=t03doebf"
-                    alt="User"
-                    width={500}
-                    height={500}
-                  /> */}
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
