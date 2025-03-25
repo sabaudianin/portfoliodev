@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useTheme } from "@/hooks/useTheme";
+import Typewriter from "@/components/Typewriter/Typewriter";
 
 export default function Hero() {
   const { theme, mounted } = useTheme();
@@ -18,7 +19,7 @@ export default function Hero() {
             Hi there, I am
           </h2>
           <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-            Rafal Bobko!
+            <Typewriter text="Rafal Bobko" />
           </h2>
 
           <p className="lg:text-3xl sm:text-xl text-lg lg:my-6 my-2 text-gray-200">
