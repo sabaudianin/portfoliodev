@@ -14,7 +14,7 @@ export default function Hero() {
       aria-label="Hero section with introduction"
     >
       <div className="p-8 mx-auto flex flex-col md:flex-row  items-center h-full text-center gap-8">
-        <div className="text-white flex flex-col gap-4 justify-center md:w-1/2 w-full">
+        <div className="flex flex-col gap-4 justify-center md:w-1/2 w-full">
           <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold">
             Hi there, I am
           </h2>
@@ -22,10 +22,11 @@ export default function Hero() {
             <Typewriter text="Rafal Bobko" />
           </h2>
 
-          <p className="lg:text-3xl sm:text-xl text-lg lg:my-6 my-2 text-gray-200">
-            I am an experienced developer. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Cupiditate nihil voluptatibus vero
-            odit odio numquam modi veniam quisquam consectetur rerum?
+          <p className="lg:text-3xl sm:text-xl text-lg lg:my-6 my-2 ">
+            I&apos;m a passionate developer focused on building user-friendly
+            web applications. With a background in JavaScript, TypeScript, and
+            modern frameworks like React and Next.js, I enjoy solving real-world
+            problems and constantly learning new tools to improve my workflow.
           </p>
 
           <div className="flex sm:flex-row flex-col justify-center gap-4 lg:mt-4 mt-2">

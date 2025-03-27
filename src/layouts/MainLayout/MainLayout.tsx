@@ -10,7 +10,7 @@ export const MainLayout = ({
   children: ReactNode;
 }): ReactNode => {
   return (
-    <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto] ">
       <header className="w-full shadow-md">
         <Navbar />
       </header>

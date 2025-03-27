@@ -59,13 +59,9 @@ const techCategories = [
         name: "Tailwind CSS",
         link: "https://tailwindcss.com/",
       },
+
       {
-        icon: <RiNextjsFill className="text-black dark:text-white" />,
-        name: "Next.js",
-        link: "https://nextjs.org/",
-      },
-      {
-        icon: <SiRedux className="text-purple-600" />,
+        icon: <SiRedux className="text-red-600" />,
         name: "Redux",
         link: "https://redux.js.org/",
       },
@@ -100,6 +96,11 @@ const techCategories = [
     title: " Dev Tools",
     stack: [
       {
+        icon: <RiNextjsFill className="" />,
+        name: "Next.js",
+        link: "https://nextjs.org/",
+      },
+      {
         icon: <SiWebpack className="text-blue-300" />,
         name: "Webpack",
         link: "https://webpack.js.org/",
@@ -113,7 +114,7 @@ const techCategories = [
       },
 
       {
-        icon: <FaGithub className="text-black dark:text-white" />,
+        icon: <FaGithub className="" />,
         name: "GitHub",
         link: "https://github.com/",
       },
@@ -143,7 +144,7 @@ const techCategories = [
             src="https://playwright.dev/img/playwright-logo.svg"
             alt="Playwright"
             title="Playwright"
-            className="w-6 h-6 hover:scale-105 transition-transform"
+            className="w-7 h-7 hover:scale-105 transition-transform"
           />
         ),
         name: "Playwright",
@@ -163,12 +164,11 @@ const techCategories = [
 export const TechSkills = () => {
   return (
     <div className="space-y-12 py-10">
+      <h2 className=" text-2xl text-center font-bold">My Tech Stack:</h2>
       {techCategories.map((category, i) => (
         <div key={i}>
-          <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
-            {category.title}
-          </h3>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 justify-items-center">
+          <h3 className="text-xl font-semibold mb-4 ">{category.title}</h3>
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2 justify-items-center">
             {category.stack.map(({ icon, name, link }, i) => (
               <Link
                 key={i}
@@ -176,15 +176,15 @@ export const TechSkills = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={name}
-                className="flex flex-col items-center space-y-2 hover:scale-105 transition-transform group"
+                className="flex flex-col items-center py-2 hover:scale-105 transition-transform group"
               >
                 <div
-                  className="text-2xl group-hover:animate-pulse"
+                  className="text-2xl md:text-4xl group-hover:animate-pulse"
                   title={name}
                 >
                   {icon}
                 </div>
-                <span className="text-sm text-gray-700 dark:text-gray-300">
+                <span className="text-xs text-gray-700 dark:text-gray-300">
                   {name}
                 </span>
               </Link>

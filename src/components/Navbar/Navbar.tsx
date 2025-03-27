@@ -1,7 +1,7 @@
 import MenuHamburger from "./MenuHamburger";
 import MenuLinks from "./MenuLinks";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import Image from "next/image";
+
 import Link from "next/link";
 
 export const Navbar = () => {
