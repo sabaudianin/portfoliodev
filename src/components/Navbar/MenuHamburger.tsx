@@ -13,7 +13,7 @@ const MenuHamburger: React.FC = () => {
     <div className="relative sm:hidden">
       <button
         type="button"
-        className="relative z-20 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+        className="relative z-20 inline-flex items-center justify-center rounded-md p-2 hover:scale-105 font-extrabold"
         aria-controls="mobile-menu"
         aria-expanded={isOpen}
         aria-label="Toggle menu"
@@ -56,7 +56,7 @@ const MenuHamburger: React.FC = () => {
       {isOpen && (
         <nav
           id="mobile-menu"
-          className="absolute top-full left-0 w-screen bg-gray-800 shadow-lg opacity-100 transition-opacity duration-200 ease-in-out"
+          className="absolute top-15 -right-1  bg-gray-800 shadow-lg opacity-100 transition-opacity duration-200 ease-in-out"
           role="menu"
           aria-label="Mobile navigation"
         >

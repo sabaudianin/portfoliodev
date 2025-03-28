@@ -11,7 +11,7 @@ export const Education = () => {
     <div className=" pt-8">
       <h2 className="font-bold text-4xl py-2">Education:</h2>
       <div className="relative pl-6 sm:pl-2 my-2">
-        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-white "></div>
+        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4  rounded-full border-2 border-cyan-400 "></div>
         <p className="text-lg font-bold ">
           Wyższa Szkoła Kształcenia Zawodowego
         </p>
