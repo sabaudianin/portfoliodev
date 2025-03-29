@@ -7,10 +7,13 @@ import { Experience } from "./experience/Experience";
 export default function AboutMe() {
   return (
     <MainLayout>
-      <section>
-        <p className="text-3xl sm:text-4xl font-bold pt-12 text-center">
-          This is the part where i talk about myself.
-        </p>
+      <section className="grid gap-y-12">
+        <div className="text-center pt-12">
+          <span className=" text-2xl font-bold text-center text-white">
+            Take a look at what I do — my skills, experience, and a bit about
+            me.
+          </span>
+        </div>
         <TechSkills />
         <Education />
         <Experience />

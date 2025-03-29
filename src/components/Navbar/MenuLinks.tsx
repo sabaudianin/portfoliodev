@@ -9,7 +9,7 @@ export default function MenuLinks() {
           <Link
             key={link.id}
             href={link.url}
-            className="rounded-md px-3 py-2 text-lg text-white transform transition-transform duration-200 hover:scale-105"
+            className="rounded-md px-3 py-2 text-sm md:text-lg text-white transform transition-transform duration-200 hover:scale-105"
           >
             {link.title}
           </Link>

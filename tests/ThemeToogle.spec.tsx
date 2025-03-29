@@ -5,7 +5,7 @@ import { describe, it, expect, vi } from "vitest";
 import { useTheme } from "@/hooks/useTheme";
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 
-// Prawidłowe mockowanie hooka `useTheme` w Vitest
+//mockowanie hooka `useTheme` w Vitest
 vi.mock("@/hooks/useTheme");
 
 describe("ThemeToggle Component", () => {

@@ -1,11 +1,10 @@
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
+import { Projects } from "./projectsView/Projects";
 
 export default function MyProjects() {
   return (
     <MainLayout>
-      <section>
-        <p className="text-4xl">MY PROJECTSs</p>
-      </section>
+      <Projects />
     </MainLayout>
   );
 }

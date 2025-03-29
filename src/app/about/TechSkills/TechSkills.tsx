@@ -169,8 +169,8 @@ const techCategories = [
 
 export const TechSkills = () => {
   return (
-    <div className="relative space-y-6 py-10 ">
-      <h2 className=" text-2xl text-center font-bold">My Tech Stack:</h2>
+    <div className="relative space-y-6  ">
+      <h2 className=" text-4xl font-bold">Skills</h2>
       {techCategories.map((category, i) => (
         <div key={i}>
           <h3 className="text-xl font-semibold mb-4 ">{category.title}</h3>
@@ -185,7 +185,7 @@ export const TechSkills = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={name}
-                className="flex flex-col items-center py-1 hover:scale-105 transition-transform "
+                className="flex flex-col items-center py-1 hover:scale-105 transition-transform py-2"
               >
                 <div
                   className="text-2xl md:text-4xl group-hover:animate-pulse"

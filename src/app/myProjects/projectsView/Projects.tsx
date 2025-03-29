@@ -36,7 +36,7 @@ const projects = [
   },
 ];
 
-export const MyProjects = () => {
+export const Projects = () => {
   return (
     <section className="container mx-auto px-4 py-16">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white mb-10">

@@ -1,12 +1,12 @@
 export const Experience = () => {
   return (
-    <div className="relative pt-8 pl-6 sm:pl-6 border-l-4 border-gray-300 dark:border-gray-700 space-y-10">
+    <div className="relative pt-2 mt-8 pl-6 sm:pl-6 border-l-4 border-cyan-300  space-y-10">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4">
         Experience Timeline
       </h2>
 
       <div className="relative pl-6 sm:pl-0">
-        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-white dark:border-gray-900"></div>
         <p className="text-lg font-semibold text-gray-800 dark:text-white">
           Warehouse Manager
         </p>
@@ -34,7 +34,7 @@ export const Experience = () => {
       </div>
 
       <div className="relative pl-6 sm:pl-0">
-        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-white dark:border-gray-900"></div>
         <p className="text-lg font-semibold text-gray-800 dark:text-white">
           Team Supervisor
         </p>
