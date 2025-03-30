@@ -1,6 +1,6 @@
 import MenuHamburger from "./MenuHamburger";
 import MenuLinks from "./MenuLinks";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import ThemeToggle from "../../../components/ThemeToggle/ThemeToggle";
 
 import Link from "next/link";
 

@@ -1,6 +1,6 @@
-import Hero from "@/layouts/Hero/Hero";
+import Hero from "@/app/home/Hero/Hero";
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
-import { AboutMe } from "@/layouts/AboutMe/AboutMe";
+import { AboutMe } from "./home/AboutMe/AboutMe";
 
 export default function Home() {
   return (

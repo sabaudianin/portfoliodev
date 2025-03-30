@@ -1,6 +1,6 @@
 "use client";
 
-import { Navbar } from "@/components/Navbar/Navbar";
+import { Navbar } from "@/layouts/Header/Navbar/Navbar";
 import { ReactNode } from "react";
 import { Footer } from "@/layouts/Footer/Footer";
 
