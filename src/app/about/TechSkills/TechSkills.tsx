@@ -173,7 +173,9 @@ export const TechSkills = () => {
       <h2 className=" text-4xl font-bold">Skills</h2>
       {techCategories.map((category, i) => (
         <div key={i}>
-          <h3 className="text-xl font-semibold mb-4 ">{category.title}</h3>
+          <h3 className="text-xl font-semibold mb-4 text-center">
+            {category.title}
+          </h3>
           <div className="relative">
             <div className="absolute border -top-4 border-cyan-400 w-full"></div>
           </div>

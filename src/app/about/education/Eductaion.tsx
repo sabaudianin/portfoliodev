@@ -23,6 +23,7 @@ export const Education = () => {
         <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-cyan-500 rounded-full  "></div>
         <p className="text-lg font-bold  ">CodersLab School IT</p>
         <span className="text-sm font-extralight">2023–2024</span>
+        <p className="">Certified Bootcamp Course</p>
         <p className="font-semibold">JavaScript Developer</p>
       </div>
 

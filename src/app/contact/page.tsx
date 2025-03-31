@@ -36,10 +36,11 @@ export default function Contact() {
           </p>
         </div>
         <ul className="flex justify-center items-center">
+          {" "}
           {contactLinks.map((link) => (
             <li
               key={link.name}
-              className="text-4xl p-4 hover:scale-120 animate-fade-in"
+              className="text-4xl md:text-6xl p-4 hover:scale-120 animate-fade-in"
             >
               <Link
                 href={link.url}
