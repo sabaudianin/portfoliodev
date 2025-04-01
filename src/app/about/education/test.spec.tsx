@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-import { Education } from "./Education";
+import { Education } from "./Eductaion";
 import * as themeHook from "@/hooks/useTheme";
 
 describe("Education", () => {
