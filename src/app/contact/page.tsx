@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
+import { ContactForm } from "./contactForm/ContactForm";
 
 const contactLinks = [
   {
@@ -54,6 +55,7 @@ export default function Contact() {
             </li>
           ))}
         </ul>
+        <ContactForm />
       </section>
     </MainLayout>
   );
