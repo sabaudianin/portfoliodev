@@ -1,46 +1,61 @@
 "use client";
-
+import { JSX } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ContactFormData, contactSchema } from "@/lib/validation/contactSchema";
 
-export const ContactForm = () => {
+export const ContactForm = (): JSX.Element => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
+    reset,
   } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const onSubmit = (data: ContactFormData) => {
+    setIsSubmitting(true);
     console.log(data);
+    reset();
+    setIsSubmitting(false);
   };
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-6 px-2 border rounded border-cyan-500 shadow-blue-md"
+      className="w-full sm:w-1/3 space-y-2 p-2 border rounded border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
     >
+      ..or you can sen directly message.
       <div className="pt-4">
         <input
           {...register("name")}
           placeholder="Name..."
-          className="border rounded text-center border-cyan-500 shadow-cyan-lg"
+          title="Nice to meet You."
+          className="w-full border rounded text-center border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
         />
-        {errors.name && <p className="text-red-500">{errors.name.message}</p>}
+        {errors.name && (
+          <p className="text-red-500 text-xs">{errors.name.message}</p>
+        )}
       </div>
       <div>
         <input
           {...register("email")}
           placeholder="Email..."
-          className="shadow-cyan-glow"
+          title="We'll never share your email."
+          className="w-full border rounded text-center border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
         />
-        {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+        {errors.email && (
+          <p className="text-red-500 text-xs">{errors.email.message}</p>
+        )}
       </div>
       <div>
         <textarea
           {...register("message")}
-          placeholder="Write your message"
-          className="shadow-xl"
+          placeholder="Write your message here.."
+          className="w-full resize-none border rounded text-center border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
+          rows={5}
         />
         {errors.message && (
           <p className="text-red-500 text-xs whitespace-normal break-words max-w-sm">
@@ -48,10 +63,16 @@ export const ContactForm = () => {
           </p>
         )}
       </div>
-      <button type="submit">Submit</button>
-      <div className="shadow-[0_0_12px_rgba(6,182,212,0.6)]">INLINE SHADOW</div>
-      <div className="p-4 bg-white rounded shadow-cyan-glow">FORCE TEST</div>
-      <div className="shadow-cyan-glow">Glow!</div>
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className=" p-2 border rounded bg-cyan-500  shadow-[0_0_12px_rgba(6,182,212,0.6)] hover:scale-105"
+      >
+        {isSubmitting ? "Sending..." : "Submit"}
+      </button>
+      {isSubmitSuccessful && (
+        <p className="text-green-500 text-sm">Message sent successfully!</p>
+      )}
     </form>
   );
 };

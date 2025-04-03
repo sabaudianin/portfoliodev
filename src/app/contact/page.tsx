@@ -28,10 +28,10 @@ const contactLinks = [
 export default function Contact() {
   return (
     <MainLayout>
-      <section className="grid place-items-center min-h-3/4 text-center pt-12">
-        <div className="text-center text-h-full pt-12">
+      <section className="grid place-items-center min-h-3/4 text-center p-2">
+        <div className="text-center text-h-full pt-4">
           <h3 className="text-3xl font-semibold mb-2">Let’s Contact</h3>
-          <p className="max-w-xl mx-auto text-xl">
+          <p className="max-w-xl mx-auto text-md">
             Whether you're looking for a reliable developer, a collaborative
             teammate, or just want to chat, just reach out!
           </p>
