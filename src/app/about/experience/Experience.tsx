@@ -1,7 +1,7 @@
 export const Experience = () => {
   return (
     <div className="relative pt-2 mt-8 pl-6 sm:pl-6 border-l-4 border-cyan-300  space-y-10">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+      <h2 className="text-3xl sm:text-4xl font-bold text-green-800 dark:text-red-500 mb-4">
         Experience Timeline
       </h2>
 

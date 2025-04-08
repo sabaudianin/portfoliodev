@@ -1,5 +1,4 @@
 import React from "react";
-q;
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
 import { Education } from "./Eductaion";
