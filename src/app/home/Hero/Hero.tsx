@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useTheme } from "@/hooks/useTheme";
+import { useTheme } from "@/hooks/useTheme/useTheme";
 import Typewriter from "@/components/Typewriter/Typewriter";
 
 export default function Hero() {

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTheme } from "@/hooks/useTheme";
+import { useTheme } from "@/hooks/useTheme/useTheme";
 import { JSX } from "react";
 
 export default function ThemeToggle(): JSX.Element {

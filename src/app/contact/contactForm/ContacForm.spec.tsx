@@ -20,6 +20,7 @@ describe("ContactForm Tests", () => {
     expect(emailInput).toBeInTheDocument();
     expect(messageInput).toBeInTheDocument();
     expect(submitBtn).toBeInTheDocument();
+
     await user.type(nameInput, "John Doe");
     await user.type(emailInput, "jd@xx.com");
     await user.type(messageInput, "Hello this is a test message.");

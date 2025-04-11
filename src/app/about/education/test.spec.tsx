@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { vi } from "vitest";
 import { Education } from "./Eductaion";
-import * as themeHook from "@/hooks/useTheme";
+import * as themeHook from "@/hooks/useTheme/useTheme";
 
 describe("Education", () => {
   beforeEach(() => {
