@@ -1,4 +1,3 @@
-import { doto } from "@/ui/fonts";
 import { MainLayout } from "@/layouts/MainLayout/MainLayout";
 import { TechSkills } from "./techSkills/TechSkills";
 import { Education } from "./education/Eductaion";
