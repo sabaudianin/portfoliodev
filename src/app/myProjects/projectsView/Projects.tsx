@@ -2,39 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
-const projects = [
-  {
-    title: "",
-    image: "",
-    description: "",
-    repo: "",
-  },
-  {
-    title: "",
-    image: "",
-    description: "",
-    repo: "",
-  },
-  {
-    title: "",
-    image: "",
-    description: "",
-    repo: "",
-  },
-  {
-    title: "",
-    image: "",
-    description: "",
-    repo: "",
-  },
-  {
-    title: "",
-    image: "",
-    description: "",
-    repo: "",
-  },
-];
+import { projects } from "@/utils/constans/projects";
 
 export const Projects = () => {
   return (
