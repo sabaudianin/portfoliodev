@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Links } from "./navlinks";
 
 const MenuHamburger: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -20,43 +20,13 @@ const MenuHamburger: React.FC = () => {
         onClick={toggleMenu}
       >
         <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
-        {isOpen ? (
-          <svg
-            className="block size-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        ) : (
-          <svg
-            className="block size-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        )}
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
       </button>
 
       {isOpen && (
         <nav
           id="mobile-menu"
-          className="absolute top-15 -right-1  bg-gray-800 shadow-lg opacity-100 transition-opacity duration-200 ease-in-out"
+          className="absolute top-16 right-0 bg-gray-800 shadow-lg transition-opacity duration-200 ease-in-out"
           role="menu"
           aria-label="Mobile navigation"
         >
@@ -65,7 +35,7 @@ const MenuHamburger: React.FC = () => {
               <li key={link.id}>
                 <Link
                   href={link.url}
-                  className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white transition"
+                  className="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 transition"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.title}
@@ -78,5 +48,39 @@ const MenuHamburger: React.FC = () => {
     </div>
   );
 };
+
+const MenuIcon = () => (
+  <svg
+    className="size-8"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    aria-hidden="true"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+    />
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg
+    className="size-8"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    aria-hidden="true"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+);
 
 export default MenuHamburger;
