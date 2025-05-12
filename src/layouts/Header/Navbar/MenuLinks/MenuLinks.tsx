@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { Links } from "./navlinks";
+import { Links } from "../../../../types/navlinks";
 
 export default function MenuLinks() {
   return (
     <div className="hidden sm:ml-6 sm:block">
-      <div className="flex justify-center align-center space-x-4">
+      <div className="flex justify-center items-center space-x-4">
         {Links.map((link) => (
           <Link
             key={link.id}

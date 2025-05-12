@@ -1,6 +1,7 @@
-import MenuHamburger from "./MenuHamburger/MenuHamburger";
-import MenuLinks from "./MenuLinks/MenuLinks";
-import ThemeToggle from "../../../components/ThemeToggle/ThemeToggle";
+import React from "react";
+import MenuHamburger from "../MenuHamburger/MenuHamburger";
+import MenuLinks from "../MenuLinks/MenuLinks";
+import ThemeToggle from "../../../../components/ThemeToggle/ThemeToggle";
 
 import Link from "next/link";
 

@@ -2,7 +2,7 @@ import React from "react";
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import MenuLinks from "./MenuLinks";
-import { Links } from "./navlinks";
+import { Links } from "../../../../types/navlinks";
 
 describe("Component MenuLinks", () => {
   beforeEach(() => {
