@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Links } from "./navlinks";
+import { Links } from "../MenuLinks/navlinks";
 
 const MenuHamburger: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
