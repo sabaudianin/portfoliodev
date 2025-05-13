@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Links } from "../../../../types/navlinks";
+import { Links } from "../../../types/navlinks";
 
 export default function MenuLinks() {
   return (

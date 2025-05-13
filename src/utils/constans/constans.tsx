@@ -164,4 +164,18 @@ export const techCategories: TechCategory[] = [
       },
     ],
   },
+  {
+    title: "Backend",
+    stack: [
+      {
+        icon: (
+          <span className="text-purple-500 font-bold text-sm">
+            C#<span className="text-gray-300">.NET</span>
+          </span>
+        ),
+        name: "C#",
+        link: "https://dotnet.microsoft.com/en-us/languages/csharp",
+      },
+    ],
+  },
 ];

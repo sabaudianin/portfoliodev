@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
-import { AboutMe } from "./AboutMe";
+import { AboutMe } from "./Summary";
 
 vi.mock("./Features", () => ({
   default: () => <div>Mocked Features</div>,

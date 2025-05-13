@@ -31,7 +31,7 @@ export const features = [
       </svg>
     ),
     description:
-      "JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, Git, REST APIs.",
+      "JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, Git, REST APIs. C#",
   },
   {
     title: "Experience",
@@ -46,8 +46,7 @@ export const features = [
         <path d="M20 6H4v12h16V6zm0-2a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h16z" />
       </svg>
     ),
-    description:
-      "3+ years in web development. Worked on SaaS products, startups, and freelance projects.",
+    description: "1+ years in web development.",
   },
   {
     title: "Projects",

@@ -1,9 +1,9 @@
 import Features from "./Features";
 
-export const AboutMe = () => {
+export const Summary = () => {
   return (
     <section className="bg-white dark:bg-gray-950">
-      <div className="flex flex-col items-center mx-auto max-w-[78rem] px-6 py-32 gap-y-16">
+      <div className="flex flex-col items-center mx-auto max-w-[78rem] px-6 py-8 gap-y-16">
         <div className="mx-auto max-w-[36.75rem] text-center text-gray-950 dark:text-gray-50">
           <h2 className="text-3xl font-bold mb-3 lg:text-4xl">
             Let me introduce myself.
