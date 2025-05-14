@@ -26,9 +26,14 @@ export const Projects = () => {
               />
             </div>
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                {project.title}
-              </h3>
+              <Link
+                href={project.link}
+                target="_blank"
+              >
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                  {project.title}
+                </h3>
+              </Link>
               <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
                 {project.description}
               </p>
