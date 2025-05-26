@@ -24,9 +24,10 @@ export default function Hero() {
 
           <p className="lg:text-3xl sm:text-xl text-lg lg:my-6 my-2 ">
             I&apos;m a passionate developer focused on building user-friendly
-            web applications. With a background in JavaScript, TypeScript, and
-            modern frameworks like React and Next.js, I enjoy solving real-world
-            problems and constantly learning new tools to improve my workflow.
+            web applications. With a background in JavaScript, TypeScript, C#,
+            .NET and modern frameworks like React and Next.js, I enjoy solving
+            real-world problems and constantly learning new tools to improve my
+            workflow.
           </p>
 
           <div className="flex sm:flex-row flex-col justify-center gap-4 lg:mt-4 mt-2">
