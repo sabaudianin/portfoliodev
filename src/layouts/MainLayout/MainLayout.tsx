@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/layouts/Header/Navbar/Navbar";
 import { ReactNode } from "react";
-import { Footer } from "@/layouts/Footer/Footer";
+import { Footer } from "@/layouts/Footer/FooterLayout";
 
 export const MainLayout = ({
   children,

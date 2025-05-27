@@ -3,10 +3,10 @@ import { describe, it, expect } from "vitest";
 import { MainLayout } from "./MainLayout";
 
 // Moc each component test separatly
-vi.mock("@/layouts/Header/Navbar/Navbar/Navbar", () => ({
+vi.mock("@/layouts/Header/Navbar", () => ({
   Navbar: () => <div data-testid="navbar" />,
 }));
-vi.mock("@/layouts/Footer/Footer", () => ({
+vi.mock("@/layouts/Footer/FooterLayout", () => ({
   Footer: () => <div data-testid="footer" />,
 }));
 
