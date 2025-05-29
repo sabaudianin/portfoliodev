@@ -18,9 +18,9 @@ export default function Features() {
         </div>
 
         <div className="w-full grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, idx) => (
+          {features.map((feature, i) => (
             <Link
-              key={idx}
+              key={i}
               href={feature.href}
               className="text-center group"
             >

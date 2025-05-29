@@ -14,7 +14,7 @@ export const MainLayout = ({
       <header className="w-full shadow-md">
         <Navbar />
       </header>
-      <main className="container mx-auto px-4">{children}</main>
+      <main className="container mx-auto px-4 ">{children}</main>
       <footer className="w-full text-center">
         <Footer />
       </footer>

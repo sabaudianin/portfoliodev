@@ -5,7 +5,10 @@ import { techCategories } from "@/utils/constans/constans";
 
 export const TechSkills = () => {
   return (
-    <div className="relative space-y-6  ">
+    <div
+      id="skills"
+      className="relative space-y-6"
+    >
       <h2 className=" text-4xl font-bold">Skills</h2>
       {techCategories.map((category, i) => (
         <div key={i}>

@@ -8,7 +8,10 @@ export const Education = () => {
   if (!mounted) return null;
 
   return (
-    <div className="relative  pr-6 sm:pr-6 border-r-4 border-cyan-300 space-y-10">
+    <div
+      id="education"
+      className="relative  pr-6 sm:pr-6 border-r-4 border-cyan-300 space-y-10"
+    >
       <h2 className="font-bold text-4xl ">Education</h2>
       <div className="relative pl-6 sm:pl-2 my-2">
         <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4  rounded-full  bg-cyan-400 "></div>
@@ -28,7 +31,7 @@ export const Education = () => {
       </div>
 
       <div className="relative pl-6 sm:pl-2 my-2">
-        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-cyan-500 rounded-full  "></div>
+        <div className="absolute left-0 sm:-left-[1.1rem] top-1 w-4 h-4 bg-cyan-500 rounded-full"></div>
         <p className="text-lg font-semibold  ">
           Wyższa Szkoła Zawodowa im. Jana Pawła II w Białej Podlaskiej
         </p>

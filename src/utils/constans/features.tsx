@@ -22,12 +22,13 @@ export const features = [
     href: "/about#skills",
     icon: (
       <svg
-        width="24"
-        height="24"
+        xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
         viewBox="0 0 24 24"
+        className="w-7 h-7 text-cyan-500"
+        aria-label="Skills"
       >
-        <path d="M12 7.77L18.39 18H5.61L12 7.77M12 2L1 21h22L12 2z" />
+        <path d="M20.7 5.3a1 1 0 0 0-1.4 0L17.6 7l-1.3-1.3 1.7-1.7a1 1 0 0 0-1.4-1.4L15 4.3l-1.3-1.3a1 1 0 0 0-1.4 1.4L13.6 6l-1.3 1.3L6 4v4L4 9v2h2l1 1h4L6.7 18.3a1 1 0 1 0 1.4 1.4L17 11.9l1.3 1.3-1.7 1.7a1 1 0 1 0 1.4 1.4l1.7-1.7 1.3 1.3a1 1 0 0 0 1.4-1.4l-1.3-1.3 1.3-1.3a1 1 0 0 0-1.4-1.4L20.7 10l-1.3-1.3 1.3-1.3a1 1 0 0 0 0-1.4z" />
       </svg>
     ),
     description:
@@ -38,43 +39,47 @@ export const features = [
     href: "/about#experience",
     icon: (
       <svg
-        width="24"
-        height="24"
+        xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
         viewBox="0 0 24 24"
+        className="w-7 h-7 text-blue-600"
+        aria-label="Experience"
       >
-        <path d="M20 6H4v12h16V6zm0-2a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h16z" />
-      </svg>
-    ),
-    description: "1+ years in web development.",
-  },
-  {
-    title: "Projects",
-    href: "/about#projects",
-    icon: (
-      <svg
-        width="24"
-        height="24"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M14 2H6a2 2 0 00-2 2v6h2V4h8V2zm4 4h-4a2 2 0 00-2 2v6H4v2h8v6a2 2 0 002 2h4a2 2 0 002-2V8a2 2 0 00-2-2z" />
+        <path d="M4 7V5a2 2 0 0 1 2-2h4a1 1 0 0 1 1 1v2h2V4a1 1 0 0 1 1-1h4a2 2 0 0 1 2 2v2H4zm16 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h16z" />
       </svg>
     ),
     description:
-      "Portfolio, E-commerce dashboard, Design-to-code converter, Blog engine with CMS integration.",
+      " I’ve clocked countless hours crafting code, debugging, and collaborating on projects. My journey has been a blend of learning, building, and growing as a developer.",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-7 h-7 text-purple-500"
+        aria-label="Projects"
+      >
+        <path d="M5 13l4 4-1.5 4L3 20.5 5 13zm12.5-11A7.5 7.5 0 0 0 10 5.5C10 7 9 9 7 10l3 3c1-.8 3-2 4.5-2a7.5 7.5 0 0 0 6.5-4 7.5 7.5 0 0 0-3.5-4.5z" />
+      </svg>
+    ),
+    description:
+      "MyPortfolio, Blog with Crud Operations, Todo App, Simple Landing Page and more.",
   },
   {
     title: "Goals",
     href: "/about#goals",
     icon: (
       <svg
-        width="24"
-        height="24"
+        xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
         viewBox="0 0 24 24"
+        className="w-7 h-7 text-rose-500"
+        aria-label="Project Goals"
       >
-        <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm1 14.93V20h-2v-3.07a8.015 8.015 0 01-5.93-5.93H4v-2h3.07a8.015 8.015 0 015.93-5.93V4h2v3.07a8.015 8.015 0 015.93 5.93H20v2h-3.07a8.015 8.015 0 01-5.93 5.93z" />
+        <path d="M12 2a10 10 0 1 0 9.95 9h-2.02a8 8 0 1 1-7.93-7.93V2zM12 6a6 6 0 1 0 6 6h-2a4 4 0 1 1-4-4V6z" />
       </svg>
     ),
     description:
@@ -85,12 +90,13 @@ export const features = [
     href: "/about#approach",
     icon: (
       <svg
-        width="24"
-        height="24"
+        xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
         viewBox="0 0 24 24"
+        className="w-7 h-7 text-green-500"
+        aria-label="Approach"
       >
-        <path d="M12 2a10 10 0 00-3.17 19.48c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34a2.66 2.66 0 00-1.11-1.46c-.91-.62.07-.6.07-.6a2.1 2.1 0 011.54 1.04 2.13 2.13 0 002.91.83 2.13 2.13 0 01.63-1.34c-2.22-.25-4.56-1.11-4.56-4.94a3.88 3.88 0 011.03-2.7 3.6 3.6 0 01.1-2.67s.84-.27 2.75 1.03a9.48 9.48 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03a3.6 3.6 0 01.1 2.67 3.88 3.88 0 011.03 2.7c0 3.84-2.34 4.69-4.57 4.93a2.39 2.39 0 01.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z" />
+        <path d="M12 2a6 6 0 0 0-6 6v4h2V8a4 4 0 1 1 8 0v4h2V8a6 6 0 0 0-6-6zM4 14h16v2a6 6 0 0 1-12 0H4v-2z" />
       </svg>
     ),
     description:

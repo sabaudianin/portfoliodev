@@ -10,10 +10,10 @@ export default function Hero() {
 
   return (
     <section
-      className="w-full h-screen flex items-center justify-between overflow-x-hidden"
+      className="w-full md:py-48 flex items-center justify-between overflow-x-hidden"
       aria-label="Hero section with introduction"
     >
-      <div className="p-8 mx-auto flex flex-col md:flex-row  items-center h-full text-center gap-8">
+      <div className="p-8  mx-auto flex flex-col md:flex-row items-center h-full text-center gap-8">
         <div className="flex flex-col gap-4 justify-center md:w-1/2 w-full">
           <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold">
             Hi there, I am
@@ -31,12 +31,15 @@ export default function Hero() {
           </p>
 
           <div className="flex sm:flex-row flex-col justify-center gap-4 lg:mt-4 mt-2">
-            <button className="md:px-8 px-4 md:py-4 py-2 md:text-xl text-lg font-semibold rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 text-white transition-transform duration-200 hover:scale-105">
+            <button
+              className="md:px-8 px-4 md:py-4 py-2 md:text-xl text-lg font-semibold rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 text-white transition-transform duration-200 hover:scale-105"
+              onClick={() => (window.location.href = "/contact")}
+            >
               Hire Me
             </button>
-            <button className="md:px-8 px-4 md:py-4 py-2 md:text-xl text-lg font-semibold border-2 border-white rounded-md text-white transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
+            {/* <button className="md:px-8 px-4 md:py-4 py-2 md:text-xl text-lg font-semibold border-2 border-white rounded-md text-white transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
               About Me
-            </button>
+            </button> */}
           </div>
         </div>
 
