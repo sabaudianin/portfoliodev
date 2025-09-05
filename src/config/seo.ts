@@ -28,7 +28,7 @@ export const defaultMetadata: Metadata = {
     siteName: SITE.NAME,
     title: SITE.NAME,
     description: SITE.DESC,
-    images: ["/og.png"],
+    images: ["/avatar.png"],
   },
   robots: {
     index: true,
