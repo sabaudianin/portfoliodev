@@ -1,0 +1,20 @@
+{
+  // Wyłącz fałszywy alarm na @theme (Tailwind v4)
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
+
+  // Włącz automatyczne poprawki ESLinta przy zapisie
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // lepsze podpowiedzi klas Tailwinda -opcja
+  "tailwindCSS.experimental.classRegex": []
+}

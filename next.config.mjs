@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === "production";
 
-export default {
+const nextConfig = {
   poweredByHeader: false,
+  compiler: {
+    removeConsole: isProd ? { exclude: ["error"] } : false,
+  },
   experimental: {
     // Szybsze bundlowanie importów z popularnych paczek
     optimizePackageImports: [
@@ -16,3 +19,5 @@ export default {
     remotePatterns: [{ protocol: "https", hostname: "**" }],
   },
 };
+
+export default nextConfig;
