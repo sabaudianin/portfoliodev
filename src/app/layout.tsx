@@ -17,7 +17,7 @@ export default function RootLayout({
       lang="pl"
       suppressHydrationWarning
     >
-      <body className={`${inter.variable} ${doto.variable} font-sans`}>
+      <body className={`${inter.className} ${doto.variable}`}>
         <PersonJsonLd
           name={SITE.AUTHOR}
           url={SITE.URL}

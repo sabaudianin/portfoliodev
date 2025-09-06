@@ -13,11 +13,6 @@ export default function Hero() {
       className="w-full md:py-48 flex items-center justify-between overflow-x-hidden"
       aria-label="Hero section with introduction"
     >
-      <div className="bg-background text-foreground font-sans p-6 rounded-[var(--radius-md)]">
-        <h1 className="font-display text-2xl mb-4">Nagłówek</h1>
-        <div className="h-16 w-16 shadow-cyan-lg rounded-[var(--radius-sm)]" />
-        {/* Alternatywa: shadow-[var(--shadow-blue-md)] */}
-      </div>
       <div className="p-8  mx-auto flex flex-col md:flex-row items-center h-full text-center gap-8">
         <div className="flex flex-col gap-4 justify-center md:w-1/2 w-full">
           <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold">

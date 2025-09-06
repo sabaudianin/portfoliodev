@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from "@/layouts/Header/Navbar/Navbar";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Footer } from "@/layouts/Footer/FooterLayout";
 
 export const MainLayout = ({
