@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import MenuHamburger from "../MenuHamburger/MenuHamburger";
-import MenuLinks from "../MenuLinks/MenuLinks";
+import MenuDesktop from "../MenuDesktop/MenuDesktop";
 import ThemeToggle from "../../../components/ThemeToggle/ThemeToggle";
 
 export const Navbar = () => {
@@ -31,7 +31,7 @@ export const Navbar = () => {
               </Link>
 
               <div className="hidden sm:block">
-                <MenuLinks />
+                <MenuDesktop />
               </div>
             </div>
 

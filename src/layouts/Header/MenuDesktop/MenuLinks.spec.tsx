@@ -1,12 +1,13 @@
 import React from "react";
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import MenuLinks from "./MenuLinks";
+import "@testing-library/jest-dom";
+import MenuDesktop from "./MenuDesktop.jsx";
 import { Links } from "../../../types/navlinks";
 
 describe("Component MenuLinks", () => {
   beforeEach(() => {
-    render(<MenuLinks />);
+    render(<MenuDesktop />);
   });
 
   it("renders all links correctly", () => {
