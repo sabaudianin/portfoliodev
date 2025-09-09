@@ -2,9 +2,10 @@
 import Image from "next/image";
 import { useTheme } from "@/hooks/useTheme/useTheme";
 import Typewriter from "@/components/Typewriter/Typewriter";
+import Link from "next/link";
 
 export default function Hero() {
-  const { theme, mounted } = useTheme();
+  const { mounted } = useTheme();
 
   if (!mounted) return null;
 
@@ -13,49 +14,51 @@ export default function Hero() {
       className="w-full md:py-48 flex items-center justify-between overflow-x-hidden"
       aria-label="Hero section with introduction"
     >
-      <div className="p-8  mx-auto flex flex-col md:flex-row items-center h-full text-center gap-8">
+      <div className="p-8 mx-auto flex flex-col md:flex-row items-center h-full text-center gap-8">
         <div className="flex flex-col gap-4 justify-center md:w-1/2 w-full">
-          <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold">
+          <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
             Hi there, I am
           </h2>
-          <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          <span className="sr-only">Rafal Bobko</span>
+          <span
+            aria-hidden
+            className="text-primary-gradient"
+          ></span>
+          <h2 className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold text-primary-gradient">
             <Typewriter text="Rafal Bobko" />
           </h2>
-
-          <p className="lg:text-3xl sm:text-xl text-lg lg:my-6 my-2 ">
+          <p className="font-semibold lg:text-3xl sm:text-xl text-lg lg:my-6 my-2 text-foreground/90 animate-slide-up">
             I&apos;m a passionate developer focused on building user-friendly
             web applications. With a background in JavaScript, TypeScript, C#,
             .NET and modern frameworks like React and Next.js, I enjoy solving
             real-world problems and constantly learning new tools to improve my
             workflow.
           </p>
-
-          <div className="flex sm:flex-row flex-col justify-center gap-4 lg:mt-4 mt-2">
-            <button
-              className="md:px-8 px-4 md:py-4 py-2 md:text-xl text-lg font-semibold rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 text-white transition-transform duration-200 hover:scale-105"
-              onClick={() => (window.location.href = "/contact")}
+          <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-blur-in">
+            <Link
+              href="/contact"
+              className="btn-primary md:text-lg md:px-8 md:py-4"
             >
               Hire Me
-            </button>
-            {/* <button className="md:px-8 px-4 md:py-4 py-2 md:text-xl text-lg font-semibold border-2 border-white rounded-md text-white transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-black">
-              About Me
-            </button> */}
+            </Link>
+
+            <Link
+              href="/my-projects"
+              className="btn-primary md:text-lg md:px-8 md:py-4"
+            >
+              See my projects
+            </Link>
           </div>
         </div>
-
-        <div className="relative md:w-1/2 w-full hidden md:flex justify-center">
+        <div className="relative md:w-1/2 w-full hidden md:flex justify-center animate-blur-in">
           <Image
-            key={theme}
-            src={
-              theme === "dark"
-                ? "https://www.dropbox.com/scl/fi/rk2euib9rzjey7rkwg8q1/20250121_191332.png?rlkey=lpeccjsi3ofaglj6xfruobv1h&st=618n9cn1&raw=1"
-                : "https://www.dropbox.com/scl/fi/kvy1tp80ii9j87zgjmkx7/20241030_103232.png?rlkey=ygixu34ykx75iqgpchgfroe1b&st=qi7gqltz&raw=1"
-            }
-            alt="Rafal Bobko"
+            src={"/avatar.png"}
+            alt="Rafal Bobko- portrait"
             width={500}
             height={500}
             priority
-            className="rounded-lg shadow-lg"
+            sizes="(min-width: 1024px) 500px, 60vw"
+            className="rounded-lg shadow-xl "
           />
         </div>
       </div>

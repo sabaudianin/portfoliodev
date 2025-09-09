@@ -25,7 +25,7 @@ export const Navbar = () => {
             <div className="flex flex-1 items-center gap-3">
               <Link
                 href="/"
-                className="inline-flex items-center rounded-md px-2 text-lg font-extrabold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-500 animate-fade-in animate-blur-in"
+                className="inline-flex items-center rounded-md px-2 text-xl font-extrabold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-500 animate-fade-in animate-blur-in"
               >
                 Rafal Bobko
               </Link>
