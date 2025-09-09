@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <section className="w-full text-center p-4 bg-gradient-to-l from-blue-400 to-cyan-400 shadow-lg text-black text-xs">
+    <footer className="w-full text-center p-4 bg-gradient-to-l from-blue-400 to-cyan-400 shadow-lg text-black text-xs">
       <div className="space-y-2">
         <div className="flex items-center justify-center gap-2">
           <FaPhone
@@ -32,6 +32,6 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };

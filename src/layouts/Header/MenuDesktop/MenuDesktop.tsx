@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Links } from "../../../types/navlinks";
 import { usePathname } from "next/navigation";
 
-export default function MenuDesktop() {
+export const MenuDesktop = () => {
   const pathname = usePathname();
 
   return (
@@ -27,4 +28,4 @@ export default function MenuDesktop() {
       })}
     </ul>
   );
-}
+};
