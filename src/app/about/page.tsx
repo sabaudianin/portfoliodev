@@ -1,11 +1,10 @@
-import { MainLayout } from "@/layouts/MainLayout/MainLayout";
 import { TechSkills } from "./techSkills/TechSkills";
 import { Education } from "./education/Eductaion";
 import { Experience } from "./experience/Experience";
 
 export default function AboutMe() {
   return (
-    <MainLayout>
+    <>
       <section className="grid gap-y-12 pt-8">
         <div className="mx-auto max-w-[36.75rem] text-center text-gray-950 dark:text-gray-50">
           <div className="text-center pt-12">
@@ -18,7 +17,7 @@ export default function AboutMe() {
             Let me introduce myself.
           </h2>
           <p className="text-base ">
-            I'm a passionate and detail-oriented developer with a love for
+            I&#39;m a passionate and detail-oriented developer with a love for
             building elegant, user-focused digital experiences. With a strong
             background in modern web technologies and a problem-solving mindset,
             I aim to craft clean, efficient, and scalable code that brings ideas
@@ -32,6 +31,6 @@ export default function AboutMe() {
           <Experience />
         </section>
       </section>
-    </MainLayout>
+    </>
   );
 }
