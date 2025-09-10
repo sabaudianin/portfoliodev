@@ -43,6 +43,57 @@
   }
 }
 
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  from {
+    transform: translateX(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes jelloH {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 /* Klasy animacji */
 .animate-fade-in {
   animation: fade-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -60,6 +111,15 @@
   animation: blink 1s step-end infinite;
 }
 
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease 0s normal none;
+}
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease 0s normal none;
+}
+.animate-jelloH {
+  animation: jelloH 1s ease 0s 1 normal none;
+}
 /*Reveal on scroll – CSS-only wariant */
 .reveal {
   opacity: 0;
@@ -75,7 +135,9 @@
   .animate-scale-in,
   .animate-blur-in,
   .animate-blink,
-  .reveal.is-visible {
+  .reveal.is-visible,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
