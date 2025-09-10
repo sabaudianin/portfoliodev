@@ -6,15 +6,15 @@ export const features = [
       <svg
         width="24"
         height="24"
-        fill="currentColor"
+        fill="blue"
         viewBox="0 0 24 24"
       >
         <path d="M12 3L1 9l11 6 9-4.91v6.11h2V9L12 3zm0 13.09L3.74 10.5 2.6 11.26 12 17l9.4-5.74-1.14-.76L12 16.09z" />
       </svg>
     ),
     description: [
-      "CodersLab Szkoła It - JavaScript Developer (2023–2024).",
-      "Wyższa Szkoła Kształcenia Zawodowego - Back-end .NET (C#) Developer (2025–).",
+      "CodersLab Szkoła It - JavaScript Developer (2023-2024).",
+      "Wyższa Szkoła Kształcenia Zawodowego - Back-end .NET (C#) Developer (2025-).",
     ],
   },
   {
@@ -23,7 +23,7 @@ export const features = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
+        fill="orange"
         viewBox="0 0 24 24"
         className="w-7 h-7 text-cyan-500"
         aria-label="Skills"
@@ -49,7 +49,7 @@ export const features = [
       </svg>
     ),
     description:
-      " I’ve clocked countless hours crafting code, debugging, and collaborating on projects. My journey has been a blend of learning, building, and growing as a developer.",
+      " I ve clocked countless hours crafting code, debugging, and collaborating on projects. My journey has been a blend of learning, building, and growing as a developer.",
   },
   {
     title: "Projects",

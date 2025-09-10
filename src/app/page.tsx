@@ -1,12 +1,12 @@
 import Hero from "@/app/home/Hero/Hero";
 
-import { Summary } from "./home/Summary/Summary";
+import { Features } from "./home/Features/Features";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Summary />
+      <Features />
     </>
   );
 }

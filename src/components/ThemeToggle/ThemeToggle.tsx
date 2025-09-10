@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import type { JSX } from "react";
 import { IoSunnySharp } from "react-icons/io5";
-
 import { MdOutlineNightlightRound } from "react-icons/md";
+
 import { useTheme } from "@/hooks/useTheme/useTheme";
 
-export default function ThemeToggle(): JSX.Element {
+export default function ThemeToggle() {
   const { theme, mounted, toggleTheme } = useTheme();
   if (!mounted) return <></>; //unikniecie błedu SSR
 
