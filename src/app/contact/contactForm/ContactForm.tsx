@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
-import { JSX } from "react";
+import type { JSX } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ContactFormData, contactSchema } from "@/lib/validation/contactSchema";
+import type { ContactFormData } from "@/lib/validation/contactSchema";
+import { contactSchema } from "@/lib/validation/contactSchema";
 
 export const ContactForm = (): JSX.Element => {
   const {
@@ -26,7 +27,7 @@ export const ContactForm = (): JSX.Element => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full sm:w-1/3 space-y-2 p-2 border rounded border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
+      className="w-full space-y-2 p-2 border rounded text-lg lg:text-3xl border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
     >
       ..or you can sen directly message.
       <div className="pt-4">
@@ -34,10 +35,10 @@ export const ContactForm = (): JSX.Element => {
           {...register("name")}
           placeholder="Name..."
           title="Nice to meet You."
-          className="w-full border rounded text-center border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
+          className="w-full border rounded text-center p-2 border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
         />
         {errors.name && (
-          <p className="text-red-500 text-xs">{errors.name.message}</p>
+          <p className="text-red-500 text-xs p-1">{errors.name.message}</p>
         )}
       </div>
       <div>
@@ -45,21 +46,28 @@ export const ContactForm = (): JSX.Element => {
           {...register("email")}
           placeholder="Email..."
           title="We'll never share your email."
-          className="w-full border rounded text-center border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
+          className="w-full border rounded text-center p-2 border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
         />
         {errors.email && (
           <p className="text-red-500 text-xs">{errors.email.message}</p>
         )}
       </div>
       <div>
+        <label
+          htmlFor="message"
+          className="sr-only"
+        >
+          Message
+        </label>
         <textarea
+          id="message"
           {...register("message")}
           placeholder="Write your message here.."
-          className="w-full resize-none border rounded text-center border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
+          className="w-full flex items-center resize-none border rounded text-left border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)] p-2"
           rows={5}
         />
         {errors.message && (
-          <p className="text-red-500 text-xs whitespace-normal break-words max-w-sm">
+          <p className="text-red-500 text-xs whitespace-normal break-words max-w-sm p-1">
             {errors.message.message}
           </p>
         )}
