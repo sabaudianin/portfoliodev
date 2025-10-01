@@ -8,7 +8,7 @@ export const MenuDesktop = () => {
   const pathname = usePathname();
 
   return (
-    <ul className="flex items-center gap-1">
+    <ul className="flex items-center gap-1 text-2xl">
       {Links.map((link) => {
         const active =
           pathname === link.url || pathname.startsWith(`${link.url}/`);
@@ -17,7 +17,7 @@ export const MenuDesktop = () => {
             <Link
               href={link.url}
               aria-current={active ? "page" : undefined}
-              className={`inline-flex items-center rounded-md px-3 py-2 font-bold text-sm md:text-base  transition hover:scale-[1.03] hover:text-white  ${
+              className={`inline-flex items-center rounded-md px-3 py-2 font-bold  transition hover:scale-[1.03] hover:text-white  ${
                 active ? "bg-white/15 text-black" : ""
               }`}
             >

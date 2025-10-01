@@ -10,6 +10,12 @@
     var(--color-primary-from),
     var(--color-primary-to)
   );
+
+  --gradient-primary-glass: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--color-primary-from) 80%, transparent),
+    color-mix(in oklab, var(--color-primary-to) 80%, transparent)
+  );
   /* Fonty */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";

@@ -12,7 +12,7 @@ export const MenuHamburger: React.FC = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <div className="relative sm:hidden">
+    <div className="sm:hidden">
       <button
         type="button"
         className=" z-20 inline-flex items-center justify-center rounded-md p-2 hover:scale-105 font-extrabold"
@@ -28,16 +28,16 @@ export const MenuHamburger: React.FC = () => {
       {isOpen && (
         <nav
           id="mobile-menu"
-          className="absolute top-16 -right-4 glass shadow-lg transition-opacity duration-200 ease-in-out rounded-xl px-8"
+          className="absolute right-0 top-22 w-1/2 glass shadow-lg transition-opacity duration-200 ease-in-out rounded-xl px-8"
           role="menu"
           aria-label="Mobile navigation"
         >
-          <ul className="flex flex-col space-y-1  py-3">
+          <ul className="flex flex-col space-y-1 py-3 text-center text-xl">
             {Links.map((link) => (
               <li key={link.id}>
                 <Link
                   href={link.url}
-                  className="block whitespace-nowrap  px-3 py-2 text-base font-bold hover:bg-gray-700 transition"
+                  className="block whitespace-nowrap px-3 py-2 font-extrabold transition"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.title}

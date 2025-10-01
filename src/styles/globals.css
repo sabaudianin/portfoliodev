@@ -20,8 +20,8 @@ html.dark {
 }
 
 html.dark .glass {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(57, 81, 123, 0.545);
+
   box-shadow: 0 10px 25px -10px rgba(247, 246, 246, 0.35);
 }
 
@@ -107,11 +107,10 @@ body {
 
 /* Effects UI */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--gradient-primary-glass);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   backdrop-filter: blur(12px) saturate(120%);
   box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.35);
-  border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 @media (prefers-reduced-motion: reduce) {
