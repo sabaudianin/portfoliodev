@@ -4,16 +4,14 @@ import { SITE } from "@/config/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-
-// Ułatwia konwersję base64:
-export const runtime = "nodejs";
+export const runtime = "nodejs"; // ułatwia base64 przez Buffer (Edge też da się, ale to najprostsze)
 
 export default async function Image() {
-  // 1) Wczytaj z /public
+  // 1) Wczytaj avatar z /public bezpośrednio z dysku (build-safe)
   const fileUrl = new URL("../../public/avatar.png", import.meta.url);
   const arrayBuffer = await fetch(fileUrl).then((r) => r.arrayBuffer());
 
-  // 2) Zamień na base64 data URL (string)
+  // 2) Zrób data URL (string) – <img src> tego wymaga
   const base64 = Buffer.from(arrayBuffer).toString("base64");
   const avatarSrc = `data:image/png;base64,${base64}`;
 
@@ -39,6 +37,7 @@ export default async function Image() {
           src={avatarSrc}
           width={160}
           height={160}
+          alt=""
           style={{
             objectFit: "cover",
             borderRadius: 9999,
@@ -47,7 +46,6 @@ export default async function Image() {
             left: 72,
             border: "4px solid rgba(255,255,255,.2)",
           }}
-          alt=""
         />
         <div
           style={{
