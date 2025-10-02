@@ -1,4 +1,4 @@
-import { TechSkills } from "./techSkills/TechSkills";
+import { TechSkills } from "./TechSkills/TechSkills";
 import { Education } from "./education/Eductaion";
 import { Experience } from "./experience/Experience";
 
