@@ -20,12 +20,18 @@ export default function ThemeToggle() {
       aria-pressed={isDark}
       aria-label={label}
       title={label}
-      className="realtive size-12 rounded-md hover:scale-[1.25] inline-flex items-center justify-center transition-transform duration-150 hover:scale-[1.05]focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-500"
+      className="relative size-12 rounded-md hover:scale-[1.25] inline-flex items-center justify-center transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-500 motion-reduce:transform-none"
     >
       {isDark ? (
-        <IoSunnySharp className="text-2xl" />
+        <IoSunnySharp
+          className="text-2xl active:scale-[1.4] transition-transform motion-reduce:active:scale-100"
+          aria-hidden="true"
+        />
       ) : (
-        <MdOutlineNightlightRound className="text-2xl " />
+        <MdOutlineNightlightRound
+          className="text-2xl active:scale-[1.4] transition-transform  motion-reduce:active:scale-100"
+          aria-hidden="true"
+        />
       )}
     </button>
   );

@@ -3,7 +3,7 @@
 @import "./animations.css";
 
 :root {
-  --background: #f2f2f2;
+  --background: #dde8ea;
   --foreground: #171717;
   --primary-from: #60a5fa;
   --primary-to: #22d3ee;
@@ -21,7 +21,6 @@ html.dark {
 
 html.dark .glass {
   background: rgba(57, 81, 123, 0.545);
-
   box-shadow: 0 10px 25px -10px rgba(247, 246, 246, 0.35);
 }
 
@@ -93,7 +92,7 @@ body {
 .btn-primary:active {
   transform: translateY(1px);
 }
-.visually-hidden {
+/* .visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -103,7 +102,7 @@ body {
   border: 0;
   padding: 0;
   margin: -1px;
-}
+} */
 
 /* Effects UI */
 .glass {
