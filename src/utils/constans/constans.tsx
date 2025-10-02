@@ -23,7 +23,7 @@ import {
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
-import { TechCategory } from "@/types/tech";
+import type { TechCategory } from "@/types/tech";
 
 export const techCategories: TechCategory[] = [
   {
