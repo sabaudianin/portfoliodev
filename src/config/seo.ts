@@ -3,6 +3,8 @@
 import type { Metadata, Viewport } from "next";
 import { SITE } from "./site";
 
+const OG_IMAGE = new URL("/og.jpg", SITE.URL).toString();
+
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE.URL),
   title: { default: SITE.NAME, template: `%s | ${SITE.NAME}` },
@@ -28,7 +30,7 @@ export const defaultMetadata: Metadata = {
     siteName: SITE.NAME,
     title: SITE.NAME,
     description: SITE.DESC,
-    images: ["/avatar.png"],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
   },
   robots: {
     index: true,

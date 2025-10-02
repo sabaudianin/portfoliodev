@@ -34,9 +34,7 @@ export const TechSkills = () => {
                 >
                   {icon}
                 </div>
-                <span className="text-xs text-gray-700 dark:text-gray-300">
-                  {/* {name} */}
-                </span>
+                <span className="text-xs text-gray-700 dark:text-gray-300"></span>
               </Link>
             ))}
           </div>

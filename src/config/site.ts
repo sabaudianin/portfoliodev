@@ -1,6 +1,6 @@
 export const SITE = {
   NAME: "Rafal Bobko - React/JS developer",
-  URL: process.env.NEXT_PUBLIC_SITE_URL ?? "https://localhost:3000",
+  URL: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   DESC: "Portfolio React/JS developer - edukacja,projekty,umiejętności",
   AUTHOR: "Rafal Bobko",
   SOCIAL: {
