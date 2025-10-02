@@ -1,4 +1,4 @@
-import { ContactLink } from "@/types/contactLink";
+import type { ContactLink } from "@/types/contactLink";
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
 
 export const contactLinks: ContactLink[] = [

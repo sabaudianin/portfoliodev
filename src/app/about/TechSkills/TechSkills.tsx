@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { techCategories } from "@/utils/constans/constans";
+import { techCategories } from "../../../utils/constans/constans";
 
 export const TechSkills = () => {
   return (

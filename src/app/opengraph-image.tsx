@@ -1,11 +1,22 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 import { SITE } from "@/config/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OG() {
-  const AVATAR = `${SITE.URL}/avatar.png`;
+// Ułatwia konwersję base64:
+export const runtime = "nodejs";
+
+export default async function Image() {
+  // 1) Wczytaj z /public
+  const fileUrl = new URL("../../public/avatar.png", import.meta.url);
+  const arrayBuffer = await fetch(fileUrl).then((r) => r.arrayBuffer());
+
+  // 2) Zamień na base64 data URL (string)
+  const base64 = Buffer.from(arrayBuffer).toString("base64");
+  const avatarSrc = `data:image/png;base64,${base64}`;
+
   const TITLE = SITE.NAME;
   const SUB = SITE.DESC;
 
@@ -25,7 +36,7 @@ export default function OG() {
         }}
       >
         <img
-          src={AVATAR}
+          src={avatarSrc}
           width={160}
           height={160}
           style={{
@@ -36,6 +47,7 @@ export default function OG() {
             left: 72,
             border: "4px solid rgba(255,255,255,.2)",
           }}
+          alt=""
         />
         <div
           style={{
