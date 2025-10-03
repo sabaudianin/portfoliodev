@@ -13,13 +13,13 @@ export const Features = () => {
   return (
     <section
       aria-labelledby="features-heading"
-      className="w-full py-16 sm:py-20 lg:py-24"
+      className="w-full py-8 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-y-16">
         <div className="mx-auto max-w-[36.75rem] text-center">
           <h2
             id="features-heading"
-            className="text-3xl font-bold lg:text-4xl"
+            className="text-3xl font-bold lg:text-4xl pb-2"
           >
             Short About Me
           </h2>
