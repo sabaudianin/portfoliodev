@@ -4,7 +4,7 @@ import { inter, doto } from "@/ui/fonts";
 import PersonJsonLd from "@/components/seo/PersonJsonLd";
 import { SITE } from "@/config/site";
 import { Navbar } from "@/layouts/Header/Navbar/Navbar";
-import { Footer } from "@/layouts/Footer/FooterLayout";
+import { Footer } from "@/layouts/Footer/Footer";
 
 // re-export z pliku app/metadata.ts Next tego wymaga z appa  wtedy Next poprawnie zbuduje <head>do strony i umożliwi route  do nadpisania.
 export { metadata, viewport } from "./metadata";

@@ -7,7 +7,10 @@ import ThemeToggle from "../../../components/ThemeToggle/ThemeToggle";
 
 export const Navbar = () => {
   return (
-    <header className="sticky top-0 z-40 shadow-cyan-glow">
+    <header
+      className="sticky top-0 z-40 shadow-cyan-glow"
+      id="#top"
+    >
       <div className="glass relative lg:py-4">
         {/* Skip link */}
         <a
