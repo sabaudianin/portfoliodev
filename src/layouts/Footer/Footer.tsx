@@ -3,15 +3,15 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="w-full text-center p-4 bg-gradient-to-l from-blue-400 to-cyan-400 shadow-lg text-black text-sm lg:text-lg font-semibold">
-      <section className="flex items-center justify-evenly ">
+    <footer className="w-full text-center p-6 glass shadow-lg text-white ">
+      <section className="flex items-center justify-evenly">
         <address>
-          <div className="space-y-2 ">
-            <div className="flex items-center justify-center gap-2">
+          <div className="text-xs lg:text-lg space-y-2">
+            <div className="flex items-baseline justify-center  hover:scale-[1.03]">
               <FaPhone
                 role="img"
                 aria-label="phone"
-                className="text-base "
+                className=""
                 aria-hidden="true"
               />
               <a
@@ -22,7 +22,7 @@ export const Footer = () => {
                 +48 793386445
               </a>
             </div>
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2 hover:scale-[1.03]">
               <FaEnvelope
                 role="img"
                 aria-label="envelope"
@@ -40,16 +40,16 @@ export const Footer = () => {
           </div>
         </address>
 
-        <div className="flex items-center justify-center gap-4 ">
+        <div className="flex items-center justify-center gap-4 text-xl lg:text-4xl">
           <a
             href="https://github.com/sabaudianin"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded "
+            className="inline-flex items-center gap-2  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded "
           >
             <FaGithub
               aria-hidden="true"
-              className="text-4xl"
+              className=" text-black bg-white hover:bg-gray-200 hover:scale-[1.03]  rounded-full "
             />
             <span className="sr-only ">GitHub</span>
           </a>
@@ -61,7 +61,7 @@ export const Footer = () => {
           >
             <FaLinkedin
               aria-hidden="true"
-              className="text-3xl"
+              className="text-blue-500 bg-white hover:bg-gray-200 hover:scale-[1.03] rounded"
             />
             <span className="sr-only">LinkedIn</span>
           </a>

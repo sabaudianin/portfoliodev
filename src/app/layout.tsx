@@ -36,7 +36,7 @@ export default function RootLayout({
           id="main"
           role="main"
           tabIndex={-1}
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 stripes stripes--pulse"
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 "
         >
           {children}
         </main>

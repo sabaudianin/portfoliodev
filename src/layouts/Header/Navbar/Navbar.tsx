@@ -8,7 +8,7 @@ import ThemeToggle from "../../../components/ThemeToggle/ThemeToggle";
 export const Navbar = () => {
   return (
     <header
-      className="sticky top-0 z-40 shadow-cyan-glow"
+      className="sticky top-0 z-40 shadow-dark-glow text-xl text-white/90"
       id="#top"
     >
       <div className="glass relative lg:py-4">
@@ -29,7 +29,7 @@ export const Navbar = () => {
               <Link
                 href="/"
                 aria-label="Main page"
-                className="inline-flex items-center rounded-md px-2 text-xl lg:text-4xl font-extrabold text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/90 focus-visible:ring-offset-1    animate-fade-in animate-blur-in active:scale-[1.1] hover:text-white/90 transition"
+                className="inline-flex items-center rounded-md px-2 md:text-2xl lg:text-4xl font-extrabold  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/90 focus-visible:ring-offset-1    animate-fade-in animate-blur-in active:scale-[1.1] hover:scale-[1.03] transition"
               >
                 Rafal Bobko
               </Link>

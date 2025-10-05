@@ -3,7 +3,7 @@
 @import "./animations.css";
 
 :root {
-  --background: #d1dce6;
+  --background: #f8f8f8;
   --foreground: #171717;
   --primary-from: #60a5fa;
   --primary-to: #22d3ee;

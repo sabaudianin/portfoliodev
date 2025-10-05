@@ -13,8 +13,8 @@
 
   --gradient-primary-glass: linear-gradient(
     to right,
-    color-mix(in oklab, var(--color-primary-from) 80%, transparent),
-    color-mix(in oklab, var(--color-primary-to) 80%, transparent)
+    color-mix(in oklab, oklch(70.4% 0.04 256.788) 80%, transparent),
+    color-mix(in oklab, oklch(37.2% 0.044 257.287) 80%, transparent)
   );
   /* Fonty */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
@@ -23,5 +23,5 @@
 
   --shadow-blue-md: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
   --shadow-cyan-lg: 0 10px 15px -3px rgba(6, 182, 212, 0.5);
-  --shadow-cyan-glow: 0 0 12px rgba(6, 182, 212, 0.6);
+  --shadow-dark-glow: 0 0 12px rgba(44, 45, 45, 0.6);
 }

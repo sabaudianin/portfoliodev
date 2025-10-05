@@ -8,7 +8,7 @@ export const MenuDesktop = () => {
   const pathname = usePathname();
 
   return (
-    <ul className="w-full flex items-center justify-between gap-2 text-2xl">
+    <ul className="w-full flex items-center justify-between gap-2 ">
       {Links.map((link) => {
         const active =
           pathname === link.url || pathname.startsWith(`${link.url}/`);
