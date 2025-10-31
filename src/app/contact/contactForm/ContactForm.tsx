@@ -27,7 +27,7 @@ export const ContactForm = (): JSX.Element => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full space-y-2 p-2 border rounded text-lg lg:text-3xl border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
+      className="w-full space-y-2 p-2 border rounded border-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.6)]"
     >
       ..or you can sen directly message.
       <div className="pt-4">
@@ -67,7 +67,7 @@ export const ContactForm = (): JSX.Element => {
           rows={5}
         />
         {errors.message && (
-          <p className="text-red-500 text-xs whitespace-normal break-words max-w-sm p-1">
+          <p className="w-full text-red-500 text-xs text-center whitespace-normal break-words  p-1">
             {errors.message.message}
           </p>
         )}

@@ -8,18 +8,18 @@ export default function Contact() {
     <>
       <section className="grid place-items-center min-h-3/4 text-center p-2">
         <div className="text-center text-h-full pt-4">
-          <h3 className="text-3xl font-semibold mb-2">Let’s Contact</h3>
+          <h3 className="text-3xl font-semibold mb-2">Lets Contact</h3>
           <p className="max-w-xl mx-auto text-md">
             Whether you&#39;re looking for a reliable developer, a collaborative
             teammate, or just want to chat, just reach out!
           </p>
         </div>
-        <ul className="flex justify-center items-center">
+        <ul className="flex justify-between items-center">
           {" "}
           {contactLinks.map((link) => (
             <li
               key={link.name}
-              className="text-4xl md:text-6xl p-4 hover:scale-120 animate-fade-in"
+              className="text-2xl md:text-4xl p-4 hover:scale-120 animate-fade-in"
             >
               <Link
                 href={link.url}

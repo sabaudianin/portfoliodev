@@ -3,20 +3,19 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="w-full text-center p-6 glass shadow-lg text-white ">
+    <footer className="w-full text-left p-6 glass shadow-lg text-white font-doto">
       <section className="flex items-center justify-evenly">
         <address>
           <div className="text-xs lg:text-lg space-y-2">
-            <div className="flex items-baseline justify-center  hover:scale-[1.03]">
+            <div className="flex items-center justify-center  hover:scale-[1.03]">
               <FaPhone
                 role="img"
                 aria-label="phone"
-                className=""
                 aria-hidden="true"
+                className="text-[var(--primary-to)] "
               />
               <a
                 href="tel:+48793386445"
-                className="hover:underline"
                 aria-label="Call +48 793 386 445"
               >
                 +48 793386445
@@ -26,12 +25,12 @@ export const Footer = () => {
               <FaEnvelope
                 role="img"
                 aria-label="envelope"
-                className="hover:underline break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
+                className=" text-[var(--primary-from)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
                 aria-hidden="true"
               />
               <a
                 href="mailto:rafbobbob@gmail.com"
-                className="hover:underline break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
+                className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
                 aria-label="Email: rafbobbob@gmail.com"
               >
                 rafbobbob@gmail.com
@@ -71,7 +70,7 @@ export const Footer = () => {
         className="my-3 mx-auto h-px w-40 bg-black/20"
         aria-hidden="true"
       />
-      <p className="text-xs lg:text-sm">
+      <p className="text-xs lg:text-sm text-center">
         © {new Date().getFullYear()} Rafal Bobko. All rights reserved.
       </p>
     </footer>
