@@ -1,5 +1,5 @@
 import type { ContactLink } from "@/types/contactLink";
-import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
 
 export const contactLinks: ContactLink[] = [
   {
@@ -7,13 +7,9 @@ export const contactLinks: ContactLink[] = [
     url: "https://linkedin.com/in/rafal-bobko-569388234",
     name: "LinkedIn",
   },
+
   {
-    icon: <FaGithub className="text-white" />,
-    url: "https://github.com/sabaudianin",
-    name: "GitHub",
-  },
-  {
-    icon: <FaEnvelope className="text-gray-300" />,
+    icon: <FaEnvelope className="text-gray-600" />,
     url: "mailto:rafbobbob@gmail.com",
     name: "Email",
   },

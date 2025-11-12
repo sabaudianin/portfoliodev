@@ -6,17 +6,19 @@ export const Footer = () => {
     <footer className="w-full text-left p-6 glass shadow-lg text-white font-doto">
       <section className="flex items-center justify-evenly">
         <address>
-          <div className="text-xs lg:text-lg space-y-2">
-            <div className="flex items-center justify-center  hover:scale-[1.03]">
+          <div className="text-xs lg:text-lg space-y-2 font-display">
+            <div className="flex items-center justify-center  hover:scale-[1.03] ">
               <FaPhone
                 role="img"
                 aria-label="phone"
                 aria-hidden="true"
-                className="text-[var(--primary-to)] "
+                className="text-[var(--primary-to)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded
+                "
               />
               <a
                 href="tel:+48793386445"
                 aria-label="Call +48 793 386 445"
+                className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded ml-1"
               >
                 +48 793386445
               </a>
@@ -67,7 +69,7 @@ export const Footer = () => {
         </div>
       </section>
       <div
-        className="my-3 mx-auto h-px w-40 bg-black/20"
+        className="my-3 mx-auto h-px w-full bg-white/50"
         aria-hidden="true"
       />
       <p className="text-xs lg:text-sm text-center">

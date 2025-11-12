@@ -3,7 +3,7 @@
 @import "./animations.css";
 
 :root {
-  --background: #f8f8f8;
+  --background: #cedae5;
   --foreground: #171717;
   --primary-from: #60a5fa;
   --primary-to: #22d3ee;
@@ -17,6 +17,12 @@ html.dark {
   --primary-to: #06b6d4;
   --background-inverse: #f2f2f2;
   --foreground-inverse: #171717;
+}
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  --font-display: var(--font-poppins), var(--font-inter), ui-sans-serif;
 }
 
 html.dark .glass {
@@ -42,7 +48,7 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-poppins);
 }
 
 .shadow-blue-md {
@@ -53,11 +59,6 @@ body {
 }
 .shadow-cyan-glow {
   box-shadow: var(--shadow-cyan-glow);
-}
-
-.font-display {
-  font-family: var(--font-doto), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
 }
 
 .text-primary-gradient {
@@ -169,4 +170,8 @@ body {
     animation: none !important;
     transform: none !important;
   }
+}
+
+a {
+  text-decoration: none;
 }
