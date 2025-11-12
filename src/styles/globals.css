@@ -125,7 +125,7 @@ body {
 }
 
 .card {
-  background: color-mix(in oklab, var(--background) 60%, transparent);
+  background: color-mix(in oklab, var(--background) 90%, transparent);
   backdrop-filter: blur(8px);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-blue-md);

@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import { features } from "@/utils/constans/features";
 
 type Feature = {
@@ -10,6 +13,8 @@ type Feature = {
 };
 
 export const Features = () => {
+  const reduce = useReducedMotion();
+
   return (
     <section
       aria-labelledby="features-heading"
@@ -31,44 +36,52 @@ export const Features = () => {
 
         <ul className="w-full grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {(features as Feature[]).map((feature, i) => {
-            const animateIcon =
-              i % 2 === 0 ? "animate-slide-in-left" : "animate-slide-in-right";
-            const delay = `${i * 80}ms`;
+            const fromX = reduce ? 0 : i % 2 === 0 ? -16 : 16; // naprzemiennie L/R
+            const delay = i * 0.2; // 80ms * i
+
             return (
-              <Link
+              <motion.li
                 key={feature.title}
-                href={feature.href}
-                className={`group block h-full rounded-xl p-5 ring-1 ring-foreground hover:ring-fpreground/20 tranistion hover:-translate-y-0.5 hover:shadow-blue-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 card card--glitch p-6`}
-                style={{ animationDelay: delay }}
+                initial={{ opacity: 0, x: fromX }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
+                className="h-full"
               >
-                <article className={`${animateIcon}`}>
-                  <div className="w-fit mx-auto p-3 rounded-lg  ring-1 ring-inset ring-gray-200 dark:ring-gray-800 group-hover:shadow-lg transition bg-[var(--background-inverse)]">
-                    {feature.icon}
-                  </div>
-                  <h3 className="mt-4 mb-2  text-lg font-bold lg:text-xl text-center">
-                    {feature.title}
-                  </h3>
-                  {Array.isArray(feature.description) ? (
-                    <ul
-                      role="list"
-                      className="space-y-1 text-center"
-                    >
-                      {feature.description.map((desc) => (
-                        <li
-                          key={desc}
-                          className="text-base "
-                        >
-                          {desc}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="text-base text-center">
-                      {feature.description}
-                    </p>
-                  )}
-                </article>
-              </Link>
+                <Link
+                  href={feature.href}
+                  className="group block h-full rounded-xl ring-1 ring-foreground/30 hover:ring-foreground/20 transition-transform duration-300 hover:scale-105 hover:shadow-blue-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 card p-6"
+                >
+                  <article>
+                    <div className="w-fit mx-auto p-3 rounded-lg   group-hover:shadow-lg transition group-hover:translate-y-[-2px] transition-transform ">
+                      {feature.icon}
+                    </div>
+                    <h3 className="mt-4 mb-2 text-lg font-bold lg:text-xl text-center">
+                      {feature.title}
+                    </h3>
+
+                    {Array.isArray(feature.description) ? (
+                      <ul
+                        role="list"
+                        className="space-y-1 text-center"
+                      >
+                        {feature.description.map((desc) => (
+                          <li
+                            key={desc}
+                            className="text-base"
+                          >
+                            {desc}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-base text-center">
+                        {feature.description}
+                      </p>
+                    )}
+                  </article>
+                </Link>
+              </motion.li>
             );
           })}
         </ul>
