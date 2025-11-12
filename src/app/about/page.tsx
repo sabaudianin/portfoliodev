@@ -1,22 +1,17 @@
 import { TechSkills } from "./TechSkills/TechSkills";
 import { Education } from "./education/Eductaion";
 import { Experience } from "./experience/Experience";
+import { Certificats } from "./education/certificats/Certificats";
 
 export default function AboutMe() {
   return (
     <>
       <section className="grid gap-y-12 pt-8">
-        <div className="mx-auto max-w-[36.75rem] text-center text-gray-950 dark:text-gray-50">
-          <div className="text-center pt-12">
-            <span className=" text-2xl font-bold text-center text-white">
-              Take a look at what I do — my skills, experience, and a bit about
-              me.
-            </span>
-          </div>
-          <h2 className="text-3xl font-bold my-6 lg:text-4xl">
-            Let me introduce myself.
+        <div className="mx-auto max-w-[36.75rem] text-center ">
+          <h2 className="text-3xl font-bold  lg:text-4xl pb-2">
+            Let me introduce myself:
           </h2>
-          <p className="text-base ">
+          <p className="text-base md:text-xl">
             I&#39;m a passionate and detail-oriented developer with a love for
             building elegant, user-focused digital experiences. With a strong
             background in modern web technologies and a problem-solving mindset,
@@ -28,6 +23,7 @@ export default function AboutMe() {
         <TechSkills />
         <Education />
         <section id="experience">
+          <Certificats />
           <Experience />
         </section>
       </section>

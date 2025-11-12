@@ -8,11 +8,11 @@ export const features = [
   {
     title: "Education",
     href: "/about#education",
-    icon: <FaGraduationCap className="w-12 h-12 text-sky-500" />,
+    icon: <FaGraduationCap className="w-12 h-12 text-blue-600" />,
     description: [
-      "CodersLab Szkoła It - JavaScript Developer (2023-2024).",
+      "CodersLab Szkoła It • JavaScript Developer (2023-2024). ",
 
-      "WSKZ Postgraduates Studies - Backend Developer .NET(C#)  (2025-ongoing).",
+      "WSKZ Postgraduates Studies • Backend Developer .NET(C#)  (2025-ongoing).",
     ],
   },
   {
@@ -25,7 +25,7 @@ export const features = [
   {
     title: "Experience",
     href: "/about#experience",
-    icon: <LuWaypoints className="w-12 h-12 text-blue-600" />,
+    icon: <LuWaypoints className="w-12 h-12 text-violet-600" />,
     description:
       "I have spent countless hours coding, debugging, and collaborating on projects. My journey has been a mix of learning, building, and growing as a developer.",
   },

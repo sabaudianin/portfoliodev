@@ -6,13 +6,13 @@ export const Footer = () => {
     <footer className="w-full text-left p-6 glass shadow-lg text-white font-doto">
       <section className="flex items-center justify-evenly">
         <address>
-          <div className="text-xs lg:text-lg space-y-2 font-display">
+          <div className="text-xs md:text-base lg:text-xl space-y-2 font-display">
             <div className="flex items-center justify-center  hover:scale-[1.03] ">
               <FaPhone
                 role="img"
                 aria-label="phone"
                 aria-hidden="true"
-                className="text-[var(--primary-to)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded
+                className="text-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded
                 "
               />
               <a
@@ -23,11 +23,11 @@ export const Footer = () => {
                 +48 793386445
               </a>
             </div>
-            <div className="flex items-center justify-center gap-2 hover:scale-[1.03]">
+            <div className="flex items-center justify-center gap-2 p-2 hover:scale-[1.03] tranistion-transform duration-300">
               <FaEnvelope
                 role="img"
                 aria-label="envelope"
-                className=" text-[var(--primary-from)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
+                className=" text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
                 aria-hidden="true"
               />
               <a
@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
         </address>
 
-        <div className="flex items-center justify-center gap-4 text-xl lg:text-4xl">
+        <div className="flex items-center justify-center gap-4 text-xl md:text-2xl lg:text-4xl">
           <a
             href="https://github.com/sabaudianin"
             target="_blank"
