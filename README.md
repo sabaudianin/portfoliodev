@@ -8,6 +8,8 @@
 
 # Contact Form with AntySpam - honeypot, zod validations in front & Server with same schema, rate limiting
 
+# Integrates with Resend to send messages to my inbox.
+
 # Framer Motions for Animations
 
 # Api route api/contact
