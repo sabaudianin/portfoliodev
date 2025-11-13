@@ -9,12 +9,11 @@ export async function POST(req: Request) {
     //honeypot check
     if (typeof body.honeypot === "string" && body.honeypot.trim().length > 0) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // zeracamy 200 ale nic sie nie dzieje , bot wydymany
+      return NextResponse.json({ success: true }, { status: 200 });
     }
-    // zeracamy 200 ale nic sie nie dzieje , bot wydymany
-    return NextResponse.json({ success: true }, { status: 200 });
-
     //Prawdziwa serwerowa validacja dla nie botów  - nie ufać frontowi NIGDY !
-
     const data = contactSchema.parse(body);
     console.log("new contact data", data);
     return NextResponse.json({ success: true }, { status: 200 });
