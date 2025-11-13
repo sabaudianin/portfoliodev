@@ -3,6 +3,7 @@ import { z } from "zod";
 import { contactSchema } from "@/lib/validation/contactSchema";
 
 export async function POST(req: Request) {
+  console.log("LOGS API POST LOGS LOGS LOGS");
   try {
     const body = await req.json();
 
@@ -13,6 +14,7 @@ export async function POST(req: Request) {
       // zeracamy 200 ale nic sie nie dzieje , bot wydymany
       return NextResponse.json({ success: true }, { status: 200 });
     }
+
     //Prawdziwa serwerowa validacja dla nie botów  - nie ufać frontowi NIGDY !
     const data = contactSchema.parse(body);
     console.log("new contact data", data);
