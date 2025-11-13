@@ -1,23 +1,10 @@
 import "@/styles/globals.css";
-import { Inter, Poppins } from "next/font/google";
+import { poppins, inter } from "@/ui/fonts";
 
 import PersonJsonLd from "@/components/seo/PersonJsonLd";
 import { SITE } from "@/config/site";
 import { Navbar } from "@/layouts/Header/Navbar/Navbar";
 import { Footer } from "@/layouts/Footer/Footer";
-
-export const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-export const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-  variable: "--font-poppins",
-});
 
 // re-export z pliku app/metadata.ts Next tego wymaga z appa  wtedy Next poprawnie zbuduje <head>do strony i umożliwi route  do nadpisania.
 export { metadata, viewport } from "./metadata";

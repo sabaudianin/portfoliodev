@@ -1,4 +1,4 @@
-import { Doto, Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -6,9 +6,9 @@ export const inter = Inter({
   variable: "--font-inter",
 });
 
-export const doto = Doto({
-  weight: ["400", "700"],
+export const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
   display: "swap",
-  variable: "--font-doto",
+  variable: "--font-poppins",
 });
