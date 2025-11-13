@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { contactSchema } from "@/lib/validation/contactSchema";
 
+export const runtime = "nodejs";
+
 export async function POST(req: Request) {
   console.log("LOGS API POST LOGS LOGS LOGS");
   try {
