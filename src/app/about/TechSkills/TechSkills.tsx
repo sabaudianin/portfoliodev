@@ -4,11 +4,11 @@ import { techCategories } from "../../../utils/constans/constans";
 
 export const TechSkills = () => {
   return (
-    <div
+    <section
       id="skills"
-      className="relative space-y-6"
+      className="relative space-y-6 card p-4"
     >
-      <h2 className="p-2 text-4xl font-bold text-center card--glitch">
+      <h2 className="p-2 text-4xl font-bold text-center card--glitch ">
         Skills
       </h2>
       {techCategories.map((category, i) => (
@@ -41,6 +41,6 @@ export const TechSkills = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };

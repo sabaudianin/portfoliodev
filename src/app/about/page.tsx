@@ -1,12 +1,12 @@
 import { TechSkills } from "./TechSkills/TechSkills";
 import { Education } from "./education/Eductaion";
 import { Experience } from "./experience/Experience";
-import { Certificats } from "./education/certificats/Certificats";
+import { Certificats } from "./certificats/Certificats";
 
 export default function AboutMe() {
   return (
     <>
-      <section className="grid gap-y-12 pt-8">
+      <section className="grid gap-y-12 py-8 ">
         <div className="mx-auto max-w-[36.75rem] text-center ">
           <h2 className="text-3xl font-bold  lg:text-4xl pb-2">
             Let me introduce myself:
@@ -22,10 +22,9 @@ export default function AboutMe() {
 
         <TechSkills />
         <Education />
-        <section id="experience">
-          <Certificats />
-          <Experience />
-        </section>
+
+        <Certificats />
+        <Experience />
       </section>
     </>
   );

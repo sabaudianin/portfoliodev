@@ -3,10 +3,10 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="w-full text-left p-6 glass shadow-lg text-white font-doto">
-      <section className="flex items-center justify-evenly">
+    <footer className="w-full text-left p-2 font-doto">
+      <section className="flex items-center justify-evenly rounded-4xl glass shadow-lg text-white p-4">
         <address>
-          <div className="text-xs md:text-base lg:text-xl space-y-2 font-display">
+          <div className="text-xs md:text-base space-y-2 font-display">
             <div className="flex items-center justify-center  hover:scale-[1.03] ">
               <FaPhone
                 role="img"
@@ -69,7 +69,7 @@ export const Footer = () => {
         </div>
       </section>
       <div
-        className="my-3 mx-auto h-px w-full bg-white/50"
+        className="my-3 mx-auto h-px w-full bg-[var(--background-inverse)]"
         aria-hidden="true"
       />
       <p className="text-xs lg:text-sm text-center">

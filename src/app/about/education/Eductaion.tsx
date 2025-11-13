@@ -8,9 +8,9 @@ export const Education = () => {
   if (!mounted) return null;
 
   return (
-    <div
+    <section
       id="education"
-      className="relative pr-6 sm:pr-6 border-r-4 border-cyan-600 space-y-10"
+      className="relative space-y-10 card p-4"
     >
       <h2 className="font-bold text-4xl text-center card--glitch p-2 ">
         Education
@@ -41,6 +41,6 @@ export const Education = () => {
         <p className="">Bachelor&apos;s degree</p>
         <span className="font-semibold">Emergency Medical Services</span>
       </div>
-    </div>
+    </section>
   );
 };

@@ -1,12 +1,12 @@
 export const Experience = () => {
   return (
-    <section className="pb-4">
-      <div className="relative pt-2 mt-8 pl-4  border-l-4 border-cyan-600  space-y-10 py-8">
+    <section className="card p-4 space-y-10">
+      <div className="relative  space-y-10 py-8">
         <h2 className="text-3xl sm:text-4xl font-bold  mb-4 text-center card--glitch p-2 ">
           Experience Timeline
         </h2>
 
-        <div className="relative pl-6 sm:pl-0">
+        <div className="card p-2">
           <p className="text-lg font-semibold ">Warehouse Manager</p>
           <span className="text-sm text-gray-500">
             Olexim Sp. z o.o. | November 2014 - Present | Poland
@@ -32,7 +32,7 @@ export const Experience = () => {
           </ul>
         </div>
 
-        <div className="relative pl-6 sm:pl-0">
+        <div className="card p-2">
           <p className="text-lg font-semibold ">Warehouse Manager</p>
           <span className="text-sm text-gray-500">
             Pol-Cel Sp.z o.o. | November 2012 - October 2014 | Poland
@@ -49,7 +49,7 @@ export const Experience = () => {
           </ul>
         </div>
 
-        <div className="relative pl-6 sm:pl-0 mb-2">
+        <div className="card p-2">
           <p className="text-lg font-semibold ">Team Supervisor</p>
           <span className="text-sm text-gray-500">
             Mid Coul Farms | May 2011 - November 2012 | Scotland
@@ -61,7 +61,7 @@ export const Experience = () => {
             </li>
             <li>
               Developed a strong foundation in time management and adaptability
-              - skills.
+              skills.
             </li>
           </ul>
         </div>
