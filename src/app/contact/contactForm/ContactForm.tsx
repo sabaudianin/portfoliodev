@@ -122,6 +122,22 @@ export const ContactForm = (): JSX.Element => {
           </p>
         )}
       </div>
+      {/* Honeypot – anti-spam */}
+      <div
+        className="hidden"
+        aria-hidden="true"
+      >
+        <label htmlFor="honeypot">
+          If you are human, leave this field empty!
+        </label>
+        <input
+          id="honeypot"
+          {...register("honeypot")}
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <button
         type="submit"
         disabled={isSubmitting}
