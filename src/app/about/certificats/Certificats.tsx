@@ -28,9 +28,10 @@ export const Certificats = () => {
             src="/dyploms/cod.png"
             alt="coderslab"
             width={300}
-            height={200}
+            height={370}
           />
         </motion.div>
+
         <motion.div variants={cardVariants}>
           <Image
             src="/dyploms/charp.png"
@@ -39,28 +40,31 @@ export const Certificats = () => {
             height={200}
           />
         </motion.div>
+
         <motion.div variants={cardVariants}>
           <Image
             src="/dyploms/ts.avif"
             alt="typescript"
             width={300}
-            height={200}
+            height={220}
           />
         </motion.div>
+
         <motion.div variants={cardVariants}>
           <Image
             src="/dyploms/js.avif"
             alt="JavaScript"
             width={300}
-            height={200}
+            height={220}
           />
         </motion.div>
+
         <motion.div variants={cardVariants}>
           <Image
             src="/dyploms/react.avif"
             alt="react"
             width={300}
-            height={200}
+            height={220}
           />
         </motion.div>
       </div>
