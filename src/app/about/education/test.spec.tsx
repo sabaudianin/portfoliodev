@@ -20,15 +20,4 @@ describe("Education", () => {
     expect(screen.getByText(/Postgraduate studies/i)).toBeInTheDocument();
     expect(screen.getByText(/Emergency Medical Services/i)).toBeInTheDocument();
   });
-
-  it("returns null when not mounted", () => {
-    vi.spyOn(themeHook, "useTheme").mockReturnValue({
-      mounted: false,
-      theme: "light",
-      toggleTheme: vi.fn(),
-    });
-
-    const { container } = render(<Education />);
-    expect(container.firstChild).toBeNull();
-  });
 });

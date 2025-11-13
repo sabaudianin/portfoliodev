@@ -1,16 +1,29 @@
 "use client";
 import React from "react";
 import { techCategories } from "../../../utils/constans/constans";
+import { motion } from "framer-motion";
+import {
+  containerVariants,
+  titleVariants,
+  cardVariants,
+} from "@/ui/motion/motionVariants";
 
 export const TechSkills = () => {
   return (
-    <section
+    <motion.section
       id="skills"
       className="relative space-y-6 card p-4"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
     >
-      <h2 className="p-2 text-4xl font-bold text-center card--glitch ">
+      <motion.h2
+        className="p-2 text-4xl font-bold text-center card--glitch "
+        variants={titleVariants}
+      >
         Skills
-      </h2>
+      </motion.h2>
       {techCategories.map((category, i) => (
         <div key={i}>
           <h3 className="text-xl font-semibold mb-4 text-center p-2">
@@ -29,18 +42,19 @@ export const TechSkills = () => {
                 aria-label={name}
                 className="flex flex-col items-center hover:scale-105 transition-transform py-2"
               >
-                <div
+                <motion.div
                   className="text-2xl md:text-4xl group-hover:animate-pulse"
+                  variants={cardVariants}
                   title={name}
                 >
                   {icon}
-                </div>
+                </motion.div>
                 <span className="text-xs text-gray-700 dark:text-gray-300"></span>
               </a>
             ))}
           </div>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 };

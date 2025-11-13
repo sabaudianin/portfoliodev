@@ -1,12 +1,32 @@
+"use client";
+import { motion } from "framer-motion";
+import {
+  containerVariants,
+  titleVariants,
+  cardVariants,
+} from "@/ui/motion/motionVariants";
+
 export const Experience = () => {
   return (
-    <section className="card p-4 space-y-10">
+    <motion.section
+      className="card p-4 space-y-10"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className="relative  space-y-10 py-8">
-        <h2 className="text-3xl sm:text-4xl font-bold  mb-4 text-center card--glitch p-2 ">
+        <motion.h2
+          className="text-3xl sm:text-4xl font-bold  mb-4 text-center card--glitch p-2 "
+          variants={titleVariants}
+        >
           Experience Timeline
-        </h2>
+        </motion.h2>
 
-        <div className="card p-2">
+        <motion.div
+          className="card p-2"
+          variants={cardVariants}
+        >
           <p className="text-lg font-semibold ">Warehouse Manager</p>
           <span className="text-sm text-gray-500">
             Olexim Sp. z o.o. | November 2014 - Present | Poland
@@ -30,9 +50,12 @@ export const Experience = () => {
               inventory, scheduling, and operational workflows.
             </li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="card p-2">
+        <motion.div
+          className="card p-2"
+          variants={cardVariants}
+        >
           <p className="text-lg font-semibold ">Warehouse Manager</p>
           <span className="text-sm text-gray-500">
             Pol-Cel Sp.z o.o. | November 2012 - October 2014 | Poland
@@ -47,9 +70,12 @@ export const Experience = () => {
               service and building relations.
             </li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="card p-2">
+        <motion.div
+          className="card p-2"
+          variants={cardVariants}
+        >
           <p className="text-lg font-semibold ">Team Supervisor</p>
           <span className="text-sm text-gray-500">
             Mid Coul Farms | May 2011 - November 2012 | Scotland
@@ -64,8 +90,8 @@ export const Experience = () => {
               skills.
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };

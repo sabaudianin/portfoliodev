@@ -3,8 +3,8 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="w-full text-left p-2 font-doto">
-      <section className="flex items-center justify-evenly rounded-4xl glass shadow-lg text-white p-4">
+    <footer className="w-full text-left p-2 font-doto ">
+      <section className="flex items-center justify-evenly rounded-4xl glass  text-white p-4 shadow-dark-glow">
         <address>
           <div className="text-xs md:text-base space-y-2 font-display">
             <div className="flex items-center justify-center  hover:scale-[1.03] ">
