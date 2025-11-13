@@ -5,7 +5,7 @@ import { Resend } from "resend";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL;
-const RESEND_TO_EMAIL = process.env.RESEND_TO_EMAIL;
+const RESEND_TO_EMAIL = process.env.RESEND_TO_EMAIL as string;
 
 export async function POST(req: Request) {
   console.log("LOGS API POST LOGS LOGS LOGS");
@@ -24,7 +24,12 @@ export async function POST(req: Request) {
     const data = contactSchema.parse(body);
     console.log("new contact data", data);
 
-    if (!RESEND_API_KEY || RESEND_FROM_EMAIL || RESEND_TO_EMAIL) {
+    //oszukuje typescripta lokalnymi zmiennymi
+    const apiKey = RESEND_API_KEY;
+    const fromEmail = RESEND_FROM_EMAIL;
+    const toEmail = RESEND_TO_EMAIL;
+
+    if (!apiKey || !fromEmail || !toEmail) {
       console.error("Resend env mising");
       return NextResponse.json(
         {
@@ -39,8 +44,8 @@ export async function POST(req: Request) {
 
     //wysylka emaila
     const { data: emailData, error } = await resend.emails.send({
-      from: RESEND_FROM_EMAIL,
-      to: [RESEND_TO_EMAIL],
+      from: fromEmail,
+      to: [toEmail],
       subject: `New message from ${data.name}`,
       text: [
         `Name:${data.name}`,
