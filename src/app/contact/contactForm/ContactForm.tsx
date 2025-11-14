@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import type { JSX } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -151,6 +152,15 @@ export const ContactForm = (): JSX.Element => {
       {isSubmitSuccessful && !serverError && (
         <p className="text-green-500 text-sm">Message sent successfully!</p>
       )}
+      <p className="text-xs">
+        Submitting this form means you agree to the{" "}
+        <Link
+          href="/privacy"
+          className="underline font-semibold"
+        >
+          Privacy Policy.
+        </Link>{" "}
+      </p>
     </form>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
@@ -72,9 +73,18 @@ export const Footer = () => {
         className="my-3 mx-auto h-px w-full bg-[var(--background-inverse)]"
         aria-hidden="true"
       />
-      <p className="text-xs lg:text-sm text-center">
-        © {new Date().getFullYear()} Rafal Bobko. All rights reserved.
-      </p>
+
+      <div className="w-full flex justify-center text-xs lg:text-sm text-center gap-4">
+        <span>
+          © {new Date().getFullYear()} Rafal Bobko. All rights reserved.
+        </span>
+        <Link
+          href="/privacy"
+          className="font-semibold hover:underline hover:text-bold transition"
+        >
+          Privacy Politics
+        </Link>
+      </div>
     </footer>
   );
 };
