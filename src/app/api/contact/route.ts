@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { contactSchema } from "@/lib/validation/contactSchema";
 import { Resend } from "resend";
+import { checkRateLimit } from "@/lib/rateLimits/rateLimit";
+
+export const runtime = "nodejs";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL;
@@ -9,14 +12,30 @@ const RESEND_TO_EMAIL = process.env.RESEND_TO_EMAIL as string;
 
 export async function POST(req: Request) {
   console.log("LOGS API POST LOGS LOGS LOGS");
+
+  //rate limiting first
+  const { limited, ip } = checkRateLimit(req);
+  if (limited) {
+    console.warn("Rate Limited exceed for this IP", ip);
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Too many request.Please try again later",
+      },
+      {
+        status: 429,
+      }
+    );
+  }
+
   try {
     const body = await req.json();
 
-    //honeypot check
+    //honeypot check bot zapleni ,czlowiek nie
     if (typeof body.honeypot === "string" && body.honeypot.trim().length > 0) {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // zwracamy 200 ale nic sie nie dzieje , bot wydymany
+      // zwracamy 200 ale nic sie nie dzieje ,bot oszukany
       return NextResponse.json({ success: true }, { status: 200 });
     }
 
@@ -24,7 +43,7 @@ export async function POST(req: Request) {
     const data = contactSchema.parse(body);
     console.log("new contact data", data);
 
-    //oszukuje typescripta lokalnymi zmiennymi
+    //oszukuje typescripta lokalnymi zmiennymi dla resenda
     const apiKey = RESEND_API_KEY;
     const fromEmail = RESEND_FROM_EMAIL;
     const toEmail = RESEND_TO_EMAIL;
@@ -55,7 +74,7 @@ export async function POST(req: Request) {
         data.message,
       ].join("\n"),
       html: `
-        <h2>New message from portfoliodev contact</h2>
+        <h2>Contact form msg:</h2>
         <p>Name - ${data.name}</p>
         <p>Email - ${data.email}</p>
         <p>Message - ${data.message.replace(/\n/g, "</br>")}

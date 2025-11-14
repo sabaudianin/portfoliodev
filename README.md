@@ -1,21 +1,21 @@
 # Portfolio site about me , education, skills projects and CV
 
-### Live Demo https://portfoliodev-hazel.vercel.app/
+## Live Demo https://portfoliodev-hazel.vercel.app/
 
 ## Features:
 
-# App Router
+### App Router
 
-# Contact Form with AntySpam - honeypot, zod validations in front & Server with same schema, rate limiting
+### Contact Form with AntySpam - honeypot, zod validations in front & Server with same schema, rate limiting
 
-# Integrates with Resend to send messages to my inbox.
+### Integrates with Resend to send messages to my inbox.
 
-# Framer Motions for Animations
+### Framer Motions for Animations
 
-# Api route api/contact
+### Api route in api/contact
 
-# Real errors handling (no stack tree just simple message )
+### Real errors handling (no stack tree just simple message )
 
-# Responsive views
+### Responsive views
 
-# Theme dark/Light toggler
+### Theme dark/Light toggle
