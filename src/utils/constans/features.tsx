@@ -10,9 +10,15 @@ export const features = [
     href: "/about#education",
     icon: <FaGraduationCap className="w-12 h-12 text-blue-600" />,
     description: [
-      "CodersLab Szkoła It • JavaScript Developer (2023-2024). ",
-
-      "WSKZ Postgraduates Studies • Backend Developer .NET(C#)  (2025-ongoing).",
+      <>
+        • CodersLab Szkoła It - <b>JavaScript Developer </b>
+        <span className="text-xs">(2023-2024)</span>
+        <br />
+        <br />• WSKZ Postgraduates Studies - <b>
+          Backend Developer .NET(C#){" "}
+        </b>{" "}
+        <span className="text-xs">(2025-ongoing)</span>
+      </>,
     ],
   },
   {
@@ -31,21 +37,21 @@ export const features = [
   },
   {
     title: "Projects",
-    href: "/projects",
+    href: "/my-projects",
     icon: <GrProjects className="w-12 h-12 text-stone-600" />,
     description:
       "My Projects section includes examples showcasing CMS integration, CRUD operations, microfrontend architecture, API integrations, and responsive landing pages.",
   },
   {
     title: "Goals",
-    href: "/about#goals",
+    href: "/about",
     icon: <LuGoal className="w-12 h-12 text-red-500" />,
     description:
       "Build impactful, accessible, and scalable web applications while continuously staying up to date with modern technologies.",
   },
   {
     title: "Approach",
-    href: "/about#approach",
+    href: "/about",
     icon: <FcMindMap className="w-12 h-12 text-green-500" />,
     description:
       "I value clean, maintainable code, high performance, and intuitive user experiences. I enjoy collaboration and creative problem-solving.",

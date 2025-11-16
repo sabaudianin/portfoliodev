@@ -92,7 +92,7 @@ export const ContactForm = (): JSX.Element => {
         {errors.email && (
           <p
             id="email-error"
-            className="text-red-500 text-xs"
+            className="text-red-500 text-xs p-1"
           >
             {errors.email.message}
           </p>
@@ -117,7 +117,7 @@ export const ContactForm = (): JSX.Element => {
         {errors.message && (
           <p
             id="message-error"
-            className="w-full text-red-500 text-xs text-center whitespace-normal break-words  p-1"
+            className="w-full text-red-500 text-xs text-center whitespace-normal break-words p-1"
           >
             {errors.message.message}
           </p>
@@ -142,7 +142,7 @@ export const ContactForm = (): JSX.Element => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="px-6 py-2 border rounded-xl bg-[var(--primary-from)] shadow-[0_0_12px_rgba(6,182,212,0.6)] hover:scale-105 "
+        className="px-6 py-2  rounded-xl bg-[var(--primary-to)] shadow-[0_0_12px_rgba(6,182,212,0.6)] hover:scale-105 text-white font-semibold"
       >
         {isSubmitting ? "Sending..." : "Submit"}
       </button>

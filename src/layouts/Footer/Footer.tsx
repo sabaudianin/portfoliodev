@@ -5,40 +5,38 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 export const Footer = () => {
   return (
     <footer className="w-full text-left p-2 font-doto ">
-      <section className="flex items-center justify-evenly rounded-4xl glass  text-white p-4 shadow-dark-glow">
-        <address>
-          <div className="text-xs md:text-base space-y-2 font-display">
-            <div className="flex items-center justify-center  hover:scale-[1.03] ">
-              <FaPhone
-                role="img"
-                aria-label="phone"
-                aria-hidden="true"
-                className="text-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded
+      <section className="flex items-stretch justify-evenly rounded-4xl glass text-white p-4 shadow-dark-glow">
+        <address className="text-xs md:text-base font-display pt-2">
+          <div className="flex items-center justify-center hover:scale-[1.03] mt-2">
+            <FaPhone
+              role="img"
+              aria-label="phone"
+              aria-hidden="true"
+              className="text-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded
                 "
-              />
-              <a
-                href="tel:+48793386445"
-                aria-label="Call +48 793 386 445"
-                className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded ml-1"
-              >
-                +48 793386445
-              </a>
-            </div>
-            <div className="flex items-center justify-center gap-2 p-2 hover:scale-[1.03] tranistion-transform duration-300">
-              <FaEnvelope
-                role="img"
-                aria-label="envelope"
-                className=" text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
-                aria-hidden="true"
-              />
-              <a
-                href="mailto:rafbobbob@gmail.com"
-                className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
-                aria-label="Email: rafbobbob@gmail.com"
-              >
-                rafbobbob@gmail.com
-              </a>
-            </div>
+            />
+            <a
+              href="tel:+48793386445"
+              aria-label="Call +48 793 386 445"
+              className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded ml-1"
+            >
+              +48 793386445
+            </a>
+          </div>
+          <div className="flex items-center justify-center gap-2 p-2 hover:scale-[1.03] tranistion-transform duration-300">
+            <FaEnvelope
+              role="img"
+              aria-label="envelope"
+              className=" text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
+              aria-hidden="true"
+            />
+            <a
+              href="mailto:rafbobbob@gmail.com"
+              className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
+              aria-label="Email: rafbobbob@gmail.com"
+            >
+              rafbobbob@gmail.com
+            </a>
           </div>
         </address>
 
@@ -82,7 +80,7 @@ export const Footer = () => {
           href="/privacy"
           className="font-semibold hover:underline hover:text-bold transition"
         >
-          Privacy Politics
+          Privacy Policy
         </Link>
       </div>
     </footer>
