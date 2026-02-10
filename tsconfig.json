@@ -1,21 +1,35 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "bundler",
-    "jsx": "preserve",
-
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/app/*": ["src/app/*"],
-      "@/components/*": ["src/components/*"],
-      "@/config/*": ["src/config/*"],
-      "@/lib/*": ["src/lib/*"],
-      "@/ui/*": ["src/ui/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/app/*": [
+        "src/app/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/config/*": [
+        "src/config/*"
+      ],
+      "@/lib/*": [
+        "src/lib/*"
+      ],
+      "@/ui/*": [
+        "src/ui/*"
+      ]
     },
-
     "allowJs": true,
     "strict": true,
     "noEmit": true,
@@ -24,11 +38,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-
-    "types": ["vitest/globals", "node"],
-    "plugins": [{ "name": "next" }],
+    "types": [
+      "vitest/globals",
+      "node"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "forceConsistentCasingInFileNames": true,
-    "customConditions": ["react-server", "react-client"],
+    "customConditions": [
+      "react-server",
+      "react-client"
+    ],
     "verbatimModuleSyntax": true
   },
   "include": [
@@ -36,7 +59,10 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts",
-    "next.config.mjs"
+    "next.config.mjs",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

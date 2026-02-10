@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: "BarberShop",
+    image: "/projectsView/barberview.avif",
+    description:
+      "A production-ready full-stack scheduling platform for a barbershop. Customers can book appointments through a dynamic calendar with real-time availability, while administrators manage breaks and working hours. Built with Next.js, TypeScript, Prisma, PostgreSQL, TanStack Query, and deployed on Vercel with Neon. Includes Dockerized local development and complete backend API design.",
+    repo: "https://github.com/sabaudianin/barber",
+    link: "https://barber-gamma-snowy.vercel.app/",
+  },
+  {
+    title: "RanczoPatataj",
+    image: "/projectsView/ranczo.avif",
+    description:
+      "Designed and developed a production-ready website using Next.js (React + TypeScript) with SSR/SSG, SEO optimization (metadata, Open Graph, sitemap), image optimization, and deployment on Vercel; integrated with Google Search Console for indexing and performance monitoring.",
+    repo: "https://github.com/sabaudianin/ranczo-patataj",
+    link: "https://ranczopatataj.pl/",
+  },
+  {
     title: "Pizza4Real",
     image: "/projectsView/fallbackPizza.avif",
     description:

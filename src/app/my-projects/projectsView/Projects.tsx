@@ -16,13 +16,13 @@ export const Projects = () => {
             key={index}
             className="rounded-xl overflow-hidden shadow-md bg-white dark:bg-gray-900 hover:shadow-xl transition-shadow"
           >
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-48 bg-neutral-900">
               <Image
                 src={project.image}
                 alt={project.title}
-                layout="fill"
-                objectFit="cover"
-                className="hover:scale-105 transition-transform"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover transition-transform hover:scale-105"
               />
             </div>
             <div className="p-5">
