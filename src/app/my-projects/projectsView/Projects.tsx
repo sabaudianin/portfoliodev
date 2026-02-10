@@ -31,8 +31,7 @@ export const Projects = () => {
                 target="_blank"
               >
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                  {project.title} -{" "}
-                  <span className="text-xs">Click to see more</span>
+                  {project.title} <span className="text-xs">Click to open</span>
                 </h3>
               </Link>
               <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
