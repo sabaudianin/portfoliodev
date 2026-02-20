@@ -34,7 +34,7 @@ export default function Hero() {
           </p>
           <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-blur-in">
             <Link
-              href="https://sabaudianin.github.io/Cv-Html-Css-Eng/"
+              href="https://sabaudianin.github.io/CV/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open my CV in a new tab"
