@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Ai Image Generator",
+    image: "/projectsView/aiGen.avif",
+    description:
+      "A high-performance image generation platform built with Next.js 16 (React 19) and Tailwind CSS 4. The application features a robust serverless architecture,Modal offloading heavy AI computations to  using Python. It includes a complete user dashboard, secure authentication via Better Auth, and persistent storage with Prisma ORM. Key Tech: Next.js 16, TypeScript, Python (Modal), Prisma, PostgreSQL, AWS S3.",
+    repo: "https://github.com/sabaudianin/barber",
+    link: "https://github.com/sabaudianin/ai-image-generator-app",
+  },
+  {
     title: "BarberShop",
     image: "/projectsView/barberview.avif",
     description:
