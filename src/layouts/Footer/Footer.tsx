@@ -4,85 +4,83 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="w-full text-left p-2 font-doto ">
-      <section className="flex items-stretch justify-evenly rounded-4xl glass text-white p-4 shadow-dark-glow">
-        <address className="text-xs md:text-base font-display pt-2">
-          <div className="flex items-center justify-center hover:scale-[1.03] mt-2">
-            <FaPhone
-              role="img"
-              aria-label="phone"
-              aria-hidden="true"
-              className="text-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded
-                "
-            />
+    <footer className="w-full p-4 md:p-8 font-doto text-white">
+      {/* glassmorphism */}
+      <section className="relative max-w-7xl mx-auto rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 shadow-2xl overflow-hidden">
+
+        {/* shine background */}
+        <div className="absolute -top-24 -right-24 w-64 h-64 bg-cyan-500/20 rounded-full blur-[80px] pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] pointer-events-none" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+
+
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+              LET&apos;S BUILD <br /> SOMETHING EPIC.
+            </h2>
+            <p className="text-gray-400 max-w-xs text-sm md:text-base">
+              Available for new projects and creative challenges. Let&apos;s connect!
+            </p>
+          </div>
+
+
+          <address className="not-italic space-y-4 flex flex-col items-start md:items-center lg:items-start">
             <a
               href="tel:+48793386445"
-              aria-label="Call +48 793 386 445"
-              className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded ml-1"
+              className="group flex items-center gap-3 hover:text-cyan-400 transition-colors duration-300"
             >
-              +48 793386445
+              <div className="p-3 bg-white/5 rounded-2xl group-hover:bg-cyan-500/20 transition-all">
+                <FaPhone className="text-cyan-500" />
+              </div>
+              <span className="font-medium">+48 793 386 445</span>
             </a>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-2 hover:scale-[1.03] tranistion-transform duration-300">
-            <FaEnvelope
-              role="img"
-              aria-label="envelope"
-              className=" text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
-              aria-hidden="true"
-            />
+
             <a
               href="mailto:rafbobbob@gmail.com"
-              className="break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
-              aria-label="Email: rafbobbob@gmail.com"
+              className="group flex items-center gap-3 hover:text-blue-400 transition-colors duration-300"
             >
-              rafbobbob@gmail.com
+              <div className="p-3 bg-white/5 rounded-2xl group-hover:bg-blue-500/20 transition-all">
+                <FaEnvelope className="text-blue-400" />
+              </div>
+              <span className="font-medium">rafbobbob@gmail.com</span>
+            </a>
+          </address>
+
+
+          <div className="flex justify-start md:justify-end gap-4">
+            <a
+              href="https://github.com/sabaudianin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/5 rounded-full hover:bg-white hover:text-black hover:-translate-y-2 transition-all duration-300 shadow-lg"
+              aria-label="GitHub"
+            >
+              <FaGithub size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rafal-bobko-569388234"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/5 rounded-full hover:bg-[#0077b5] hover:text-white hover:-translate-y-2 transition-all duration-300 shadow-lg"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={28} />
             </a>
           </div>
-        </address>
+        </div>
 
-        <div className="flex items-center justify-center gap-4 text-xl md:text-2xl lg:text-4xl">
-          <a
-            href="https://github.com/sabaudianin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded "
-          >
-            <FaGithub
-              aria-hidden="true"
-              className=" text-black bg-white hover:bg-gray-200 hover:scale-[1.03]  rounded-full "
-            />
-            <span className="sr-only ">GitHub</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rafal-bobko-569388234"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/70 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-200 rounded"
-          >
-            <FaLinkedin
-              aria-hidden="true"
-              className="text-blue-500 bg-white hover:bg-gray-200 hover:scale-[1.03] rounded"
-            />
-            <span className="sr-only">LinkedIn</span>
-          </a>
+
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} Rafał Bobko. Crafted with passion.</p>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="cursor-default">Design: RafBob</span>
+          </div>
         </div>
       </section>
-      <div
-        className="my-3 mx-auto h-px w-full bg-[var(--background-inverse)]"
-        aria-hidden="true"
-      />
-
-      <div className="w-full flex justify-center text-xs lg:text-sm text-center gap-4">
-        <span>
-          © {new Date().getFullYear()} Rafal Bobko. All rights reserved.
-        </span>
-        <Link
-          href="/privacy"
-          className="font-semibold hover:underline hover:text-bold transition"
-        >
-          Privacy Policy
-        </Link>
-      </div>
     </footer>
   );
 };
