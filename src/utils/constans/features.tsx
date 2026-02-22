@@ -11,13 +11,16 @@ export const features = [
     icon: <FaGraduationCap className="w-12 h-12 text-blue-600" />,
     description: [
       <>
-        • CodersLab Szkoła It - <b>JavaScript Developer </b>
-        <span className="text-xs">(2023-2024)</span>
-        <br />
-        <br />• WSKZ Postgraduates Studies - <b>
-          Backend Developer .NET(C#){" "}
-        </b>{" "}
-        <span className="text-xs">(2025-ongoing)</span>
+        <div>
+          • CodersLab Szkoła It - <b>JavaScript Developer </b>
+          <span className="text-xs">(2023-2024)</span>
+          <br />
+          <br />• WSKZ Postgraduates Studies - <b>
+            Backend Developer .NET(C#){" "}
+          </b>{" "}
+          <span className="text-xs">(2025-ongoing)</span>
+
+        </div>
       </>,
     ],
   },

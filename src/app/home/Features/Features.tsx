@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { features } from "@/utils/constans/features";
 
 type Feature = {
@@ -13,72 +13,83 @@ type Feature = {
 };
 
 export const Features = () => {
-  const reduce = useReducedMotion();
+
 
   return (
     <section
       aria-labelledby="features-heading"
-      className="w-full py-8 sm:py-20 lg:py-24"
+      className="w-full py-20 lg:py-32 relative overflow-hidden"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-y-16">
-        <div className="mx-auto max-w-[36.75rem] text-center">
-          <h2
+
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             id="features-heading"
-            className="text-3xl font-bold lg:text-4xl pb-2"
+            className="text-4xl font-black tracking-tight lg:text-5xl mb-4 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent uppercase"
           >
-            Short About Me
-          </h2>
-          <p className="text-base">
-            A quick overview of who I am and what I do. For full details, check
-            out the full About page.
+            Quick Snapshot
+          </motion.h2>
+          <p className="text-gray-400 font-doto text-sm md:text-base">
+            Everything you need to know about my professional DNA.
           </p>
         </div>
 
-        <ul className="w-full grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {(features as Feature[]).map((feature, i) => {
-            const fromX = reduce ? 0 : i % 2 === 0 ? -16 : 16; // naprzemiennie L/R
-            const delay = i * 0.2; // 80ms * i
+            const delay = i * 0.1;
 
             return (
               <motion.li
                 key={feature.title}
-                initial={{ opacity: 0, x: fromX }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
-                className="h-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay }}
+                className="group h-full"
               >
                 <Link
                   href={feature.href}
-                  className="group block h-full rounded-xl ring-1 ring-foreground/30 hover:ring-foreground/20 transition-transform duration-300 hover:scale-105 hover:shadow-blue-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 card p-6"
+                  className="relative block h-full p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:bg-white/[0.08] hover:border-cyan-500/50 overflow-hidden"
                 >
-                  <article>
-                    <div className="w-fit mx-auto p-3 rounded-lg   group-hover:shadow-lg transition group-hover:translate-y-[-2px] transition-transform ">
-                      {feature.icon}
+
+                  <div className="absolute -inset-px bg-gradient-to-br from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  <article className="relative z-10 flex flex-col h-full">
+
+                    <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 text-cyan-400 group-hover:scale-110 group-hover:text-white transition-all duration-500 shadow-xl border border-white/5">
+                      <span className="text-3xl">{feature.icon}</span>
                     </div>
-                    <h3 className="mt-4 mb-2 text-lg font-bold lg:text-xl text-center">
+
+                    <h3 className="text-xl font-bold mb-4 font-doto tracking-tight group-hover:text-cyan-400 transition-colors">
                       {feature.title}
                     </h3>
 
-                    {Array.isArray(feature.description) ? (
-                      <ul
-                        role="list"
-                        className="space-y-1 text-center"
-                      >
-                        {feature.description.map((desc) => (
-                          <li
-                            key={desc}
-                            className="text-base"
-                          >
-                            {desc}
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="text-base text-center">
-                        {feature.description}
-                      </p>
-                    )}
+                    <div className="text-gray-400 leading-relaxed text-sm md:text-base flex-grow">
+                      {Array.isArray(feature.description) ? (
+                        <ul className="space-y-2">
+                          {feature.description.map((desc) => (
+                            <li key={desc} className="flex items-start gap-2">
+
+                              {desc}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{feature.description}</p>
+                      )}
+                    </div>
+
+
+                    <div className="mt-6 flex items-center text-xs font-bold uppercase tracking-widest text-white/30 group-hover:text-cyan-400 transition-colors">
+                      Explore
+                      <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </div>
                   </article>
                 </Link>
               </motion.li>

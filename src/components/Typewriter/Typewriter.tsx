@@ -1,3 +1,5 @@
+
+"use client";
 import { useState, useEffect } from "react";
 
 export default function Typewriter({ text }: { text: string }) {
@@ -9,15 +11,17 @@ export default function Typewriter({ text }: { text: string }) {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + text[currentIndex]);
         setCurrentIndex((prev) => prev + 1);
-      }, 200);
+      }, 150);
       return () => clearTimeout(timeout);
     }
   }, [currentIndex, text]);
 
   return (
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-      {displayedText}
-      <span className="animate-blink text-cyan-400">|</span>
+    <span className="relative inline-block">
+      <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+        {displayedText}
+      </span>
+      <span className="ml-1 inline-block w-[3px] h-[0.9em] bg-cyan-400 animate-pulse align-middle" />
     </span>
   );
 }

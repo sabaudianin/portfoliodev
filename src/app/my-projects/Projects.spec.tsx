@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import { Projects } from "./Projects";
+import Projects from "./page";
 
 // temporary mock
 vi.mock("@/utils/constans/projects", () => ({
