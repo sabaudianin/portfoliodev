@@ -21,7 +21,7 @@ export const TechSkills = () => {
 
       <div className="text-center space-y-4">
         <motion.h2
-          className="text-5xl md:text-6xl font-black tracking-tighter bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent uppercase"
+          className="text-5xl md:text-6xl font-black tracking-tighter bg-gradient-to-b from-foreground to-gray-500 bg-clip-text text-transparent uppercase"
           variants={titleVariants}
         >
           Tech Stack
@@ -52,12 +52,12 @@ export const TechSkills = () => {
                   rel="noopener noreferrer"
                   variants={cardVariants}
                   whileHover={{ y: -5 }}
-                  className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300"
+                  className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300"
                 >
 
                   <div className="absolute inset-0 bg-cyan-500/0 group-hover:bg-cyan-500/10 blur-xl transition-all duration-300 rounded-full" />
 
-                  <div className="relative z-10 text-3xl md:text-5xl text-gray-400 group-hover:text-white transition-colors duration-300">
+                  <div className="relative z-10 text-3xl md:text-5xl text-gray-400 group-hover:text-foreground transition-colors duration-300">
                     {icon}
                   </div>
 

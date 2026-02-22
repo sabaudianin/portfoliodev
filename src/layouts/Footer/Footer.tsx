@@ -4,9 +4,9 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="w-full p-4 md:p-8 font-doto text-white">
+    <footer className="w-full p-4 md:p-8 font-doto ">
       {/* glassmorphism */}
-      <section className="relative max-w-7xl mx-auto rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 shadow-2xl overflow-hidden">
+      <section className="relative max-w-7xl mx-auto rounded-[2.5rem] bg-foreground/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 shadow-2xl overflow-hidden">
 
         {/* shine background */}
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-cyan-500/20 rounded-full blur-[80px] pointer-events-none" />
@@ -30,7 +30,7 @@ export const Footer = () => {
               href="tel:+48793386445"
               className="group flex items-center gap-3 hover:text-cyan-400 transition-colors duration-300"
             >
-              <div className="p-3 bg-white/5 rounded-2xl group-hover:bg-cyan-500/20 transition-all">
+              <div className="p-3 bg-foreground/5 rounded-2xl group-hover:bg-cyan-500/20 transition-all">
                 <FaPhone className="text-cyan-500" />
               </div>
               <span className="font-medium">+48 793 386 445</span>
@@ -40,7 +40,7 @@ export const Footer = () => {
               href="mailto:rafbobbob@gmail.com"
               className="group flex items-center gap-3 hover:text-blue-400 transition-colors duration-300"
             >
-              <div className="p-3 bg-white/5 rounded-2xl group-hover:bg-blue-500/20 transition-all">
+              <div className="p-3 bg-foreground/5 rounded-2xl group-hover:bg-blue-500/20 transition-all">
                 <FaEnvelope className="text-blue-400" />
               </div>
               <span className="font-medium">rafbobbob@gmail.com</span>

@@ -1,14 +1,15 @@
 "use client";
 
-import React from "react";
+
 import { IoSunnySharp } from "react-icons/io5";
 import { MdOutlineNightlightRound } from "react-icons/md";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/hooks/useTheme/useTheme";
 
 export default function ThemeToggle() {
   const { theme, mounted, toggleTheme } = useTheme();
-  if (!mounted) return <></>; //unikniecie błedu SSR
+
+  if (!mounted) return <div className="size-12" />;
 
   const isDark = theme === "dark";
   const label = isDark ? "Switch to light mode" : "Switch to dark mode";
@@ -17,22 +18,35 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      aria-pressed={isDark}
       aria-label={label}
       title={label}
-      className="relative size-12 rounded-md hover:scale-[1.25] inline-flex items-center justify-center transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-500 motion-reduce:transform-none"
+      className="group relative size-12 flex items-center justify-center rounded-2xl border border-foreground/10  backdrop-blur-md transition-all duration-300 hover:border-primary-to/50 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] focus:outline-none overflow-hidden"
     >
-      {isDark ? (
-        <IoSunnySharp
-          className="text-2xl active:scale-[1.4] transition-transform motion-reduce:active:scale-100"
-          aria-hidden="true"
-        />
-      ) : (
-        <MdOutlineNightlightRound
-          className="text-2xl active:scale-[1.4] transition-transform  motion-reduce:active:scale-100"
-          aria-hidden="true"
-        />
-      )}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={theme}
+          initial={{ y: 20, opacity: 0, rotate: -45 }}
+          animate={{ y: 0, opacity: 1, rotate: 0 }}
+          exit={{ y: -20, opacity: 0, rotate: 45 }}
+          transition={{ duration: 0.3, ease: "backOut" }}
+          className="relative z-10"
+        >
+          {isDark ? (
+            <IoSunnySharp
+              className="text-2xl text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.4)]"
+              aria-hidden="true"
+            />
+          ) : (
+            <MdOutlineNightlightRound
+              className="text-2xl text-blue-600 drop-shadow-[0_0_8px_rgba(37,99,235,0.3)]"
+              aria-hidden="true"
+            />
+          )}
+        </motion.div>
+      </AnimatePresence>
+
+
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary-from/10 to-primary-to/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </button>
   );
 }

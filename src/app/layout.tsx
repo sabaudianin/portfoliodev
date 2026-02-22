@@ -5,6 +5,7 @@ import PersonJsonLd from "@/components/seo/PersonJsonLd";
 import { SITE } from "@/config/site";
 import { Navbar } from "@/layouts/Header/Navbar/Navbar";
 import { Footer } from "@/layouts/Footer/Footer";
+import { MouseGlow } from "@/ui/mouseGlow/mouseGlow";
 
 // re-export z pliku app/metadata.ts Next tego wymaga z appa  wtedy Next poprawnie zbuduje <head>do strony i umożliwi route  do nadpisania.
 export { metadata, viewport } from "./metadata";
@@ -32,13 +33,14 @@ export default function RootLayout({
         />
 
         <Navbar />
-
+        <MouseGlow />
         <main
           id="main"
           role="main"
           tabIndex={-1}
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12"
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-36 lg:pt-48 pb-16 "
         >
+
           {children}
         </main>
 

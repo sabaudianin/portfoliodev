@@ -1,32 +1,60 @@
 "use client";
-import React from "react";
+
+import React, { useMemo } from "react";
 import Link from "next/link";
 import { Links } from "../../../types/navlinks";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { useActiveSection } from "@/hooks/useActiceSection/useActiveSection";
 
 export const MenuDesktop = () => {
   const pathname = usePathname();
 
+
+  const sectionIds = useMemo(
+    () => Links.map((l) => l.url.replace("/#", "")).filter((id) => id !== "/"),
+    []
+  );
+
+  const activeSection = useActiveSection(sectionIds);
+
   return (
-    <ul className="w-full flex items-center justify-between gap-2 ">
-      {Links.map((link) => {
-        const active =
-          pathname === link.url || pathname.startsWith(`${link.url}/`);
-        return (
-          <li key={link.id}>
-            <Link
-              href={link.url}
-              aria-current={active ? "page" : undefined}
-              aria-label={link.ariaLabel}
-              className={`inline-flex items-center rounded-md px-3 py-2 font-bold  transition hover:scale-[1.03] hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-offset-cyan-500 active:bg-[var(--primary-to)]/50 ${
-                active ? "bg-white/15 " : ""
-              }`}
-            >
-              {link.title}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <nav aria-label="Main desktop navigation">
+      <ul className="flex items-center gap-1 bg-black/5 dark:bg-white/5 p-1 rounded-2xl border border-black/5 dark:border-white/5 backdrop-blur-md">
+        {Links.map((link) => {
+
+          const isFolderActive = pathname === link.url;
+          const isSectionActive = pathname === "/" && activeSection && link.url.includes(`#${activeSection}`);
+          const isActive = isFolderActive || isSectionActive;
+
+          return (
+            <li key={link.id} className="relative">
+              <Link
+                href={link.url}
+                aria-label={link.ariaLabel}
+                className={`relative z-10 px-4 py-2 text-sm font-bold transition-colors duration-300 block ${isActive
+                  ? "text-foreground"
+                  : "text-foreground/50 hover:text-foreground"
+                  }`}
+              >
+                {link.title}
+              </Link>
+
+              {isActive && (
+                <motion.div
+                  layoutId="nav-pill"
+                  className="absolute inset-0 bg-black/5 dark:bg-white/10 rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.05)] border border-black/5 dark:border-white/5"
+                  transition={{
+                    type: "spring",
+                    bounce: 0.2,
+                    duration: 0.6
+                  }}
+                />
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };

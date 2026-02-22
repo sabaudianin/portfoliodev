@@ -7,61 +7,61 @@ import { Links } from "../../../types/navlinks";
 import { CloseIcon } from "@/components/icons/CloseIcon";
 import { MenuIcon } from "@/components/icons/MenuIcon";
 
-export const MenuHamburger: React.FC = () => {
-  const pathname = usePathname();
+import { AnimatePresence, motion } from "framer-motion";
+
+export const MenuHamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const closeMenu = () => setIsOpen(false);
-  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const pathname = usePathname();
 
   return (
-    <div className="sm:hidden">
+    <>
       <button
-        type="button"
-        className=" z-20 inline-flex items-center justify-center rounded-md p-2 font-extrabold"
-        aria-controls="mobile-menu"
-        aria-expanded={isOpen}
-        aria-label={isOpen ? "Close menu" : "Open menu"}
-        onClick={toggleMenu}
+        onClick={() => setIsOpen(!isOpen)}
+        className="relative z-50 p-2 transition-transform active:scale-90"
       >
-        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
         {isOpen ? <CloseIcon /> : <MenuIcon />}
       </button>
-      {isOpen && (
-        <div
-          className="fixed inset-0 h-screen z-10  bg-black/40 animate-fade-in motion-reduce:animate-none"
-          aria-hidden="true"
-          onClick={closeMenu}
-        />
-      )}
-      {isOpen && (
-        <nav
-          id="mobile-menu"
-          className="absolute z-20 right-0 top-20 w-1/2 px-8 glass shadow-lg transition-opacity duration-200 ease-in-out rounded-xl  motion-reduce:transition-none"
-          aria-label="Mobile navigation"
-        >
-          <ul className="flex flex-col space-y-1 py-3 text-center text-xl">
-            {Links.map((link) => {
-              const active =
-                pathname === link.url || pathname.startsWith(`${link.url}/`);
-              return (
-                <li key={link.id}>
-                  <Link
-                    href={link.url}
-                    aria-current={active ? "page" : undefined}
-                    aria-label={link.ariaLabel}
-                    onClick={closeMenu}
-                    className={`inline-flex items-center whitespace-nowrap rounded-md px-3 py-2 font-bold active:bg-[var(--primary-to)]/50 transition motion-reduce:transition-none ${
-                      active ? "bg-white/15 " : ""
-                    }`}
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      )}
-    </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(12px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            className="fixed inset-0 z-40 bg-black/60 flex items-center justify-center"
+          >
+            <motion.nav
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="w-full max-w-[80%] text-center"
+            >
+              <ul className="space-y-6">
+                {Links.map((link, i) => {
+                  const active = pathname === link.url;
+                  return (
+                    <motion.li
+                      key={link.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                    >
+                      <Link
+                        href={link.url}
+                        onClick={() => setIsOpen(false)}
+                        className={`text-4xl font-black tracking-tighter transition-all ${active ? "text-cyan-400" : "text-white hover:text-cyan-400"
+                          }`}
+                      >
+                        {link.title}
+                      </Link>
+                    </motion.li>
+                  );
+                })}
+              </ul>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
