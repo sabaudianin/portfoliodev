@@ -20,7 +20,7 @@ export const MenuDesktop = () => {
 
   return (
     <nav aria-label="Main desktop navigation">
-      <ul className="flex items-center gap-1 bg-black/5 dark:bg-white/5 p-1 rounded-2xl border border-black/5 dark:border-white/5 backdrop-blur-md">
+      <ul className="flex items-center gap-1 bg-background/5 dark:bg-foreground/5 p-1 rounded-2xl border border-background/5 dark:border-foreground/5 backdrop-blur-md">
         {Links.map((link) => {
 
           const isFolderActive = pathname === link.url;
@@ -43,7 +43,7 @@ export const MenuDesktop = () => {
               {isActive && (
                 <motion.div
                   layoutId="nav-pill"
-                  className="absolute inset-0 bg-black/5 dark:bg-white/10 rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.05)] border border-black/5 dark:border-white/5"
+                  className="absolute inset-0 bg-background/5 dark:bg-foreground/10 rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.05)] border border-background/5 dark:border-foreground/5"
                   transition={{
                     type: "spring",
                     bounce: 0.2,
