@@ -46,7 +46,7 @@ export default function Hero() {
           >
             <Link
               href="/my-projects"
-              className="group relative px-8 py-4  font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95"
+              className="group relative px-8 py-4 border border-foreground/10 bg-foreground/5 backdrop-blur-md font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95"
             >
               <span className="relative z-10">See my projects</span>
               <div className="absolute inset-0 bg-linear-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -79,7 +79,7 @@ export default function Hero() {
               width={450}
               height={450}
               priority
-              className="relative rounded-[2.5rem] grayscale-[20%] hover:grayscale-0 transition-all duration-500 shadow-2xl  group-hover:rotate-0"
+              className="relative rounded-[2.5rem] grayscale-[20%] hover:grayscale-0 transition-all duration-500 shadow-2xl group-hover:rotate-0"
             />
 
             {/* 
