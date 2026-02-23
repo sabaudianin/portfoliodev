@@ -42,7 +42,7 @@ export const techCategories: TechCategory[] = [
       { icon: <IoLogoJavascript className="text-yellow-400" />, name: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
       { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript", link: "https://www.typescriptlang.org/" },
       { icon: <FaReact className="text-cyan-400" />, name: "React 18/19", link: "https://react.dev/" },
-      { icon: <RiNextjsFill />, name: "Next.js (App Router)", link: "https://nextjs.org/" },
+      { icon: <RiNextjsFill className="text-foreground dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all duration-300" />, name: "Next.js", link: "https://nextjs.org/" },
       { icon: <FaHtml5 className="text-orange-500" />, name: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
       { icon: <FaCss3 className="text-blue-500" />, name: "CSS3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
       { icon: <RiTailwindCssFill className="text-sky-600" />, name: "Tailwind CSS v3/v4", link: "https://tailwindcss.com/" },
@@ -50,26 +50,35 @@ export const techCategories: TechCategory[] = [
       { icon: <SiRedux className="text-purple-500" />, name: "Redux Toolkit", link: "https://redux-toolkit.js.org/" },
 
       { icon: <SiReactquery className="text-pink-600" />, name: "TanStack React Query", link: "https://tanstack.com/query" },
-      { icon: <SiZod className="text-blue-600" />, name: "Zod", link: "https://zod.dev/" },
 
       {
-        icon: <SiFramer className="text-foreground" />,
+        icon: <SiFramer className="text-foreground duration-300 dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all" />,
         name: "Framer Motion",
         link: "https://www.framer.com/motion/",
       },
+      { icon: <SiZod className="text-blue-600" />, name: "Zod", link: "https://zod.dev/" },
       {
         icon: <SiReacthookform className="text-pink-400" />,
         name: "React Hook Form",
         link: "https://react-hook-form.com/",
       },
       {
-        icon: <SiRadixui className="text-foreground" />,
+        icon: <SiRadixui className="text-foreground duration-300 dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all" />,
         name: "Radix UI",
         link: "https://www.radix-ui.com/",
       },
       { icon: <SiReactrouter className="text-rose-500" />, name: "React Router", link: "https://reactrouter.com/" },
       {
-        icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#000000" style={{ opacity: 1 }}><path d="M22.219 11.784L11.784 22.219a1.045 1.045 0 0 0 1.476 1.476L23.695 13.26a1.045 1.045 0 0 0-1.476-1.476M20.132.305L.305 20.132a1.045 1.045 0 0 0 1.476 1.476L21.608 1.781A1.045 1.045 0 0 0 20.132.305" /></svg>,
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className="w-6 h-6 text-foreground duration-300 dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all"
+            fill="currentColor"
+          >
+            <path d="M22.219 11.784L11.784 22.219a1.045 1.045 0 0 0 1.476 1.476L23.695 13.26a1.045 1.045 0 0 0-1.476-1.476M20.132.305L.305 20.132a1.045 1.045 0 0 0 1.476 1.476L21.608 1.781A1.045 1.045 0 0 0 20.132.305" />
+          </svg>
+        ),
         name: "shadcn/ui",
         link: "https://ui.shadcn.com/",
       },
@@ -100,7 +109,8 @@ export const techCategories: TechCategory[] = [
       },
       {
         icon: <div>
-          <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path fill="#FFFFFF" d="M0 3.39v17.22h5.783v-5.55h6.434V8.939H5.783V3.39Zm12.217 5.55h5.638v6.122h-5.638v5.548H24V3.391H12.217Z" className="text-foreground" /></svg>
+          <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-foreground  duration-300 dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all"
+            fill="currentColor"><path d="M0 3.39v17.22h5.783v-5.55h6.434V8.939H5.783V3.39Zm12.217 5.55h5.638v6.122h-5.638v5.548H24V3.391H12.217Z" /></svg>
         </div>,
         name: "Better Auth",
         link: "https://better-auth.com/",
@@ -113,8 +123,8 @@ export const techCategories: TechCategory[] = [
     title: "Dev Tools",
     stack: [
       { icon: <FaDocker className="text-blue-400" />, name: "Docker", link: "https://www.docker.com/" },
-      { icon: <FaGithub className="text-foreground" />, name: "GitHub", link: "https://github.com/" },
-      { icon: <SiVercel className="text-foreground" />, name: "Vercel", link: "https://vercel.com/" },
+      { icon: <FaGithub className="text-foreground duration-300 dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all" />, name: "GitHub", link: "https://github.com/" },
+      { icon: <SiVercel className="text-foreground duration-300 dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.3)] transition-all" />, name: "Vercel", link: "https://vercel.com/" },
       {
         icon: <Image
           src="icons/Vite.svg"

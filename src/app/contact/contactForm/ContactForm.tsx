@@ -55,7 +55,7 @@ export const ContactForm = () => {
       </p>
 
       <div className="space-y-4">
-        {/* Name Input */}
+
         <div className="space-y-1">
           <input
             {...register("name")}
@@ -69,7 +69,7 @@ export const ContactForm = () => {
           )}
         </div>
 
-        {/* Email Input */}
+
         <div className="space-y-1">
           <input
             {...register("email")}
@@ -82,7 +82,7 @@ export const ContactForm = () => {
           )}
         </div>
 
-        {/* Message Textarea */}
+
         <div className="space-y-1">
           <textarea
             {...register("message")}

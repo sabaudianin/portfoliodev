@@ -26,14 +26,14 @@ export const SectionWrapper = ({
     return (
         <motion.section
             id={id}
-            // To jest kluczowe dla Scroll-Spy i czytników ekranu
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className={`relative w-full overflow-hidden ${className}`}
         >
-            {/* Dekoracyjne tło sekcji (Glow) */}
+            {/* Glow */}
             <div
                 className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none -z-10 opacity-50 ${glowStyles[glowColor]}`}
             />

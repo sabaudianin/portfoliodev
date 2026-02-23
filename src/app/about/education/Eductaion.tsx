@@ -31,14 +31,14 @@ export const Education = () => {
   return (
     <SectionWrapper id="education" glowColor="purple">
       <div className="flex flex-col items-center">
-        {/* Nagłówek bez Italic */}
+
         <motion.h2
           className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-16 bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent text-center"
         >
           My Education & Journey
         </motion.h2>
 
-        {/* Oś czasu: zmiana border-foreground/10 na dynamiczny kolor */}
+
         <div className="relative w-full max-w-4xl border-l-2 border-foreground/10 ml-4 md:ml-0">
           {educationData.map((item, index) => (
             <motion.div
@@ -49,7 +49,7 @@ export const Education = () => {
               viewport={{ once: true }}
               className="relative mb-12 ml-8"
             >
-              {/* Kropka na osi czasu - lepszy kontrast */}
+
               <div className={`absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 border-[var(--background)] z-10 
                 ${item.current
                   ? "bg-cyan-500 animate-pulse shadow-[0_0_15px_rgba(6,182,212,0.5)]"
@@ -58,7 +58,7 @@ export const Education = () => {
 
               <div className="card-modern group hover:scale-[1.01] transition-transform duration-300">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                  {/* POPRAWKA: text-foreground zamiast text-foreground */}
+
                   <h3 className="text-xl font-bold text-foreground  group-hover:text-[var(--primary-to)] transition-colors">
                     {item.school}
                   </h3>

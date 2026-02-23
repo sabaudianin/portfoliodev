@@ -11,7 +11,7 @@ export default function AboutMe() {
     <>
       <section className="grid gap-y-20 pt-20">
         <div className="relative mx-auto max-w-5xl text-center px-6">
-          {/* Subtelna poświata dostosowana do trybu */}
+
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary-to/5 dark:bg-cyan-500/5 blur-[120px] pointer-events-none -z-10" />
 
           <motion.div
@@ -21,7 +21,7 @@ export default function AboutMe() {
             viewport={{ once: true }}
             className="space-y-10"
           >
-            {/* Header z mocnym kontrastem */}
+
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-foreground transition-colors">
               Let me <span className="bg-gradient-to-r from-foreground/40 to-foreground/70 bg-clip-text ">introduce</span> myself
             </h2>
@@ -58,7 +58,7 @@ export default function AboutMe() {
           </motion.div>
         </div>
 
-        {/* Komponenty składowe */}
+
         <div className="space-y-32 pb-32">
           <TechSkills />
           <Education />

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/ui/sectionWrapper/sectionWrapper";
@@ -17,7 +16,7 @@ export const Certificats = () => {
   return (
     <SectionWrapper id="certificates" glowColor="blue">
       <div className="flex flex-col items-center">
-        {/* Nagłówek sekcji */}
+
         <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -26,7 +25,7 @@ export const Certificats = () => {
           My <span className="text-primary-gradient">Certificates</span>
         </motion.h2>
 
-        {/* Grid z certyfikatami */}
+
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificatesData.map((cert, index) => (
             <motion.div
@@ -38,7 +37,7 @@ export const Certificats = () => {
               whileHover={{ y: -10 }}
               className="group relative"
             >
-              {/* Opakowanie obrazu - card-modern ze szklanym efektem */}
+
               <div className="card-modern p-3 overflow-hidden bg-background/5 border-background/10 group-hover:border-primary-to/50 transition-all duration-500">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-background/20">
                   <Image
@@ -49,7 +48,7 @@ export const Certificats = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
 
-                  {/* Overlay przy najechaniu */}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                     <span className="text-background font-doto text-xs tracking-[0.2em] uppercase">
                       View Document
@@ -57,7 +56,7 @@ export const Certificats = () => {
                   </div>
                 </div>
 
-                {/* Podpis pod certyfikatem wewnątrz karty */}
+
                 <div className="mt-4 px-2 flex justify-between items-center">
                   <span className="text-sm font-bold tracking-tight text-gray-400 group-hover:text-background transition-colors">
                     {cert.label}
@@ -69,7 +68,6 @@ export const Certificats = () => {
                 </div>
               </div>
 
-              {/* Dodatkowy blask pod kartą przy hoverze */}
               <div className="absolute -inset-2 bg-primary-to/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
             </motion.div>
           ))}

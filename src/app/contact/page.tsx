@@ -5,7 +5,7 @@ import { contactLinks } from "@/utils/constans/contactLinks";
 export default function Contact() {
   return (
     <div className="relative min-h-[80vh] grid place-items-center px-4  overflow-hidden">
-      {/* Tło dedykowane dla widoku kontaktu */}
+
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-to/10 rounded-full blur-[120px] -z-10" />
 
       <div className="w-full max-w-2xl space-y-12">
@@ -19,7 +19,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Social Links z efektem Glass */}
+
         <ul className="flex justify-center items-center gap-6">
           {contactLinks.map((link) => (
             <li key={link.name}>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/ui/sectionWrapper/sectionWrapper";
 
@@ -59,7 +59,7 @@ export const Experience = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              {/* Karta Doświadczenia */}
+
               <div className="card-modern group relative overflow-hidden">
                 <div className="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-6">
                   <div>
@@ -88,7 +88,7 @@ export const Experience = () => {
                   ))}
                 </ul>
 
-                {/* Subtelny "sznyt" dla obecnej pracy */}
+
                 {exp.current && (
                   <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-transparent" />
                 )}
