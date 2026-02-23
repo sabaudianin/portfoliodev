@@ -18,7 +18,7 @@ export const Navbar = () => {
               <span className="text-xl md:text-2xl font-black tracking-tighter leading-none group-hover:text-cyan-400 transition-colors">
                 RAFAL BOBKO
               </span>
-              <span className="text-xs font-doto tracking-[0.3em] uppercase text-gray-500 group-hover:text-foreground/50 transition-colors">
+              <span className="text-xs font-doto tracking-[0.3em] uppercase  group-hover:text-foreground/50 transition-colors">
                 Fullstack Dev
               </span>
             </Link>

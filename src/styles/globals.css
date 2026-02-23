@@ -2,15 +2,14 @@
 
 :root {
   /* Light Mode */
-  /* Nowoczesny, jasny Glamour */
-  --background: #fbfcfe; /* Świetliste, czyste tło */
-  --foreground: #0f172a; /* Głęboki granat zamiast czerni */
+
+  --background: #fbfcfe;
+  --foreground: #0f172a;
   --primary-from: #3b82f6;
   --primary-to: #06b6d4;
 
-  /* Efekt kryształu w dzień */
   --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(15, 23, 42, 0.08); /* Delikatna ciemna krawędź */
+  --glass-border: rgba(15, 23, 42, 0.08);
   --glass-shadow: rgba(0, 0, 0, 0.04);
 
   --card-bg: rgba(255, 255, 255, 0.9);
@@ -24,8 +23,8 @@ html.dark {
   --primary-from: #2563eb;
   --primary-to: #0891b2;
 
-  --glass-bg: rgba(24, 24, 27, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(48, 60, 82, 0.6);
+  --glass-border: rgba(24, 74, 92, 0.08);
   --glass-shadow: rgba(0, 0, 0, 0.4);
 
   --card-bg: rgba(39, 39, 42, 0.3);
@@ -93,7 +92,6 @@ body {
   transform: scale(0.98);
 }
 
-/* Glassmorphism */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(12px) saturate(140%);
@@ -102,7 +100,6 @@ body {
   box-shadow: 0 10px 30px -10px var(--glass-shadow);
 }
 
-/* Card Modern */
 .card-modern {
   background: var(--card-bg);
   border: 1px solid var(--glass-border);
@@ -117,7 +114,6 @@ body {
   transform: translateY(-4px);
 }
 
-/*glow mouse*/
 .glow-cursor {
   width: 400px;
   height: 400px;
@@ -129,9 +125,8 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* Poprawa czytelności dla trybu jasnego */
 html:not(.dark) .card-modern {
-  background: white; /* W trybie jasnym białe karty są czytelniejsze */
+  background: white;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
 }

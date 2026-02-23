@@ -69,14 +69,14 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="hidden md:flex justify-center items-center"
         >
-          <div className="relative">
+          <div className="relative aspect-square">
             <Image
               src="/avatar.png"
               alt="Rafal Bobko"
               width={450}
               height={450}
               priority
-              className="relative rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500 shadow-2xl group-hover:rotate-0"
+              className="relative rounded-xl grayscale-25 hover:grayscale-0 transition-all duration-500 shadow-2xl group-hover:rotate-0"
             />
 
             {/* 
