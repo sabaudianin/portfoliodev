@@ -70,16 +70,13 @@ export default function Hero() {
           className="hidden md:flex justify-center items-center"
         >
           <div className="relative">
-
-
-
             <Image
               src="/avatar.png"
               alt="Rafal Bobko"
               width={450}
               height={450}
               priority
-              className="relative rounded-[2.5rem] grayscale-[20%] hover:grayscale-0 transition-all duration-500 shadow-2xl group-hover:rotate-0"
+              className="relative rounded-2xl grayscale-[20%] hover:grayscale-0 transition-all duration-500 shadow-2xl group-hover:rotate-0"
             />
 
             {/* 

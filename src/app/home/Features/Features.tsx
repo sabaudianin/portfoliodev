@@ -21,7 +21,7 @@ export const Features = () => {
       className="w-full py-16 relative overflow-hidden"
     >
 
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+      <div className="absolute top-0 lg:top-10 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
 
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
@@ -52,7 +52,7 @@ export const Features = () => {
               >
                 <Link
                   href={feature.href}
-                  className="relative block h-full p-4 rounded-xl bg-foreground/5 border border-foreground/10 backdrop-blur-sm transition-all duration-500 hover:bg-foreground/[0.08] hover:border-cyan-500/50 overflow-hidden"
+                  className="relative block h-full p-4 rounded-xl bg-foreground/5 border border-foreground/10 backdrop-blur-sm transition-all duration-500 hover:bg-foreground/10 hover:border-cyan-500/50 overflow-hidden"
                 >
 
                   <div className="absolute -inset-px bg-gradient-to-br from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

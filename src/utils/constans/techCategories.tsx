@@ -53,12 +53,12 @@ export const techCategories: TechCategory[] = [
       { icon: <SiZod className="text-blue-600" />, name: "Zod", link: "https://zod.dev/" },
 
       {
-        icon: <SiReacthookform />,
+        icon: <SiReacthookform className="text-pink-400" />,
         name: "React Hook Form",
         link: "https://react-hook-form.com/",
       },
       {
-        icon: <  SiFramer />,
+        icon: <SiFramer />,
         name: "Framer Motion",
         link: "https://www.framer.com/motion/",
       },
@@ -68,23 +68,7 @@ export const techCategories: TechCategory[] = [
         link: "https://www.radix-ui.com/",
       },
       {
-        icon: <svg
-          viewBox="0 0 200 40"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-28 h-7 text-foreground"
-          fill="currentColor"
-        >
-          <text
-            x="0"
-            y="28"
-            fontFamily="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif"
-            fontSize="24"
-            fontWeight="600"
-            letterSpacing="-0.5"
-          >
-            shadcn/ui
-          </text>
-        </svg>,
+        icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#000000" style={{ opacity: 1 }}><path d="M22.219 11.784L11.784 22.219a1.045 1.045 0 0 0 1.476 1.476L23.695 13.26a1.045 1.045 0 0 0-1.476-1.476M20.132.305L.305 20.132a1.045 1.045 0 0 0 1.476 1.476L21.608 1.781A1.045 1.045 0 0 0 20.132.305" /></svg>,
         name: "shadcn/ui",
         link: "https://ui.shadcn.com/",
       },
@@ -126,7 +110,9 @@ export const techCategories: TechCategory[] = [
   {
     title: "Dev Tools",
     stack: [
-      { icon: <SiVercel className="text-white" />, name: "Vercel", link: "https://vercel.com/" },
+      { icon: <FaDocker className="text-blue-400" />, name: "Docker", link: "https://www.docker.com/" },
+      { icon: <FaGithub className="text-foreground" />, name: "GitHub", link: "https://github.com/" },
+      { icon: <SiVercel className="text-foreground" />, name: "Vercel", link: "https://vercel.com/" },
       {
         icon: <Image
           src="icons/Vite.svg"
@@ -137,10 +123,9 @@ export const techCategories: TechCategory[] = [
           className="hover:scale-105 transition-transform w-7 h-7 lg:w-10 lg:h-10"
         />, name: "Vite", link: "https://vitejs.dev/"
       },
-      { icon: <SiWebpack className="text-blue-500" />, name: "Webpack", link: "https://webpack.js.org/" },
       { icon: <FaNodeJs className="text-green-500" />, name: "Node.js", link: "https://nodejs.org/" },
-      { icon: <FaDocker className="text-blue-400" />, name: "Docker", link: "https://www.docker.com/" },
-      { icon: <FaGithub />, name: "GitHub", link: "https://github.com/" },
+      { icon: <SiWebpack className="text-blue-500" />, name: "Webpack", link: "https://webpack.js.org/" },
+
       { icon: <SiEslint className="text-indigo-500" />, name: "EsLint", link: "https://eslint.com/" },
 
     ],
