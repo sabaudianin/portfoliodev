@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { Links } from "../../../types/navlinks";
 import { usePathname } from "next/navigation";
@@ -9,10 +9,8 @@ import { useActiveSection } from "@/hooks/useActiceSection/useActiveSection";
 
 export const MenuDesktop = () => {
   const pathname = usePathname();
-
-
   const sectionIds = useMemo(
-    () => Links.map((l) => l.url.replace("/#", "")).filter((id) => id !== "/"),
+    () => Links.map((link) => link.url.replace("/#", "")).filter((id) => id !== "/"),
     []
   );
 

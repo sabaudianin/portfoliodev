@@ -6,6 +6,7 @@ export interface NavLink {
 }
 
 export const Links: NavLink[] = [
+  { id: 0, title: "Home", url: "/", ariaLabel: "Home" },
   { id: 1, title: "About Me", url: "/about", ariaLabel: "About Me" },
   { id: 2, title: "Projects", url: "/my-projects", ariaLabel: "My Projects" },
   { id: 3, title: "Contact", url: "/contact", ariaLabel: "Contact" },
