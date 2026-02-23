@@ -41,32 +41,33 @@ export const techCategories: TechCategory[] = [
     stack: [
       { icon: <IoLogoJavascript className="text-yellow-400" />, name: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
       { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript", link: "https://www.typescriptlang.org/" },
-      { icon: <FaReact className="text-sky-400" />, name: "React 18/19", link: "https://react.dev/" },
+      { icon: <FaReact className="text-cyan-400" />, name: "React 18/19", link: "https://react.dev/" },
       { icon: <RiNextjsFill />, name: "Next.js (App Router)", link: "https://nextjs.org/" },
       { icon: <FaHtml5 className="text-orange-500" />, name: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
       { icon: <FaCss3 className="text-blue-500" />, name: "CSS3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
       { icon: <RiTailwindCssFill className="text-sky-600" />, name: "Tailwind CSS v3/v4", link: "https://tailwindcss.com/" },
       { icon: <FaSass className="text-pink-400" />, name: "Sass", link: "https://sass-lang.com/" },
       { icon: <SiRedux className="text-purple-500" />, name: "Redux Toolkit", link: "https://redux-toolkit.js.org/" },
-      { icon: <SiReactrouter className="text-rose-500" />, name: "React Router", link: "https://reactrouter.com/" },
+
       { icon: <SiReactquery className="text-pink-600" />, name: "TanStack React Query", link: "https://tanstack.com/query" },
       { icon: <SiZod className="text-blue-600" />, name: "Zod", link: "https://zod.dev/" },
 
+      {
+        icon: <SiFramer className="text-foreground" />,
+        name: "Framer Motion",
+        link: "https://www.framer.com/motion/",
+      },
       {
         icon: <SiReacthookform className="text-pink-400" />,
         name: "React Hook Form",
         link: "https://react-hook-form.com/",
       },
       {
-        icon: <SiFramer />,
-        name: "Framer Motion",
-        link: "https://www.framer.com/motion/",
-      },
-      {
-        icon: <SiRadixui className="" />,
+        icon: <SiRadixui className="text-foreground" />,
         name: "Radix UI",
         link: "https://www.radix-ui.com/",
       },
+      { icon: <SiReactrouter className="text-rose-500" />, name: "React Router", link: "https://reactrouter.com/" },
       {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#000000" style={{ opacity: 1 }}><path d="M22.219 11.784L11.784 22.219a1.045 1.045 0 0 0 1.476 1.476L23.695 13.26a1.045 1.045 0 0 0-1.476-1.476M20.132.305L.305 20.132a1.045 1.045 0 0 0 1.476 1.476L21.608 1.781A1.045 1.045 0 0 0 20.132.305" /></svg>,
         name: "shadcn/ui",
@@ -84,13 +85,6 @@ export const techCategories: TechCategory[] = [
       { icon: <SiFirebase className="text-yellow-500" />, name: "Firebase", link: "https://firebase.google.com/" },
       { icon: <SiSupabase className="text-emerald-500" />, name: "Supabase", link: "https://supabase.com/" },
       {
-        icon: <div>
-          <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path fill="#FFFFFF" d="M0 3.39v17.22h5.783v-5.55h6.434V8.939H5.783V3.39Zm12.217 5.55h5.638v6.122h-5.638v5.548H24V3.391H12.217Z" /></svg>
-        </div>,
-        name: "Better Auth",
-        link: "https://better-auth.com/",
-      },
-      {
         icon: (
           <Image
             src="icons/sharp.svg"
@@ -104,6 +98,14 @@ export const techCategories: TechCategory[] = [
         name: "C#",
         link: "https://dotnet.microsoft.com/en-us/languages/csharp",
       },
+      {
+        icon: <div>
+          <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path fill="#FFFFFF" d="M0 3.39v17.22h5.783v-5.55h6.434V8.939H5.783V3.39Zm12.217 5.55h5.638v6.122h-5.638v5.548H24V3.391H12.217Z" className="text-foreground" /></svg>
+        </div>,
+        name: "Better Auth",
+        link: "https://better-auth.com/",
+      },
+
     ],
   },
 
