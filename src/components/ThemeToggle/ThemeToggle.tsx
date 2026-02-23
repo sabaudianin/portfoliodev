@@ -1,6 +1,5 @@
 "use client";
 
-
 import { IoSunnySharp } from "react-icons/io5";
 import { MdOutlineNightlightRound } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,7 +19,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={label}
       title={label}
-      className="group relative size-12 flex items-center justify-center rounded-2xl border border-foreground/10  backdrop-blur-md transition-all duration-300 hover:border-primary-to/50 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] focus:outline-none overflow-hidden"
+      className="group relative size-12 flex items-center justify-center rounded-2xl border border-foreground/10 backdrop-blur-md transition-all duration-300 hover:border-primary-to/50 hover:shadow-[0_0_20px_rgba(6,182,212,0.2)] focus:outline-none overflow-hidden"
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
@@ -46,7 +45,7 @@ export default function ThemeToggle() {
       </AnimatePresence>
 
 
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary-from/10 to-primary-to/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-foreground/10 to-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </button>
   );
 }
