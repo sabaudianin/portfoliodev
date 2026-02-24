@@ -5,10 +5,10 @@ import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 export const Footer = () => {
   return (
     <footer className="w-full p-4 md:p-8 font-doto ">
-      {/* glassmorphism */}
+
       <section className="relative max-w-7xl mx-auto rounded-[2.5rem] bg-foreground/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 shadow-2xl overflow-hidden">
 
-        {/* shine background */}
+
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-cyan-500/20 rounded-full blur-[80px] pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-500/20 rounded-full blur-[80px] pointer-events-none" />
 
