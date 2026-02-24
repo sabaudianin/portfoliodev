@@ -16,6 +16,14 @@ export const projects = [
     link: "https://barber-gamma-snowy.vercel.app/",
   },
   {
+    title: "Crypto Pulse",
+    image: "/projectsView/crypto-pulse.avif",
+    description:
+      "Crypto Pulse Real-time Cryptocurrency Dashboard Crypto Pulse is a modern web application providing real-time cryptocurrency market data. The project is built with Next.js, utilizing server-side API routes that act as a proxy to the CoinGecko API. Data is processed in a backend service, mapped into a consistent format, and cached for fast and reliable access.React Query for fetching, caching, and synchronization. Shadcn/ui + TailwindCSS for fast, elegant, and responsive UI",
+    repo: "https://github.com/sabaudianin/crypto-pulse",
+    link: "https://crypto-pulse-blond.vercel.app/",
+  },
+  {
     title: "RanczoPatataj",
     image: "/projectsView/ranczo.avif",
     description:

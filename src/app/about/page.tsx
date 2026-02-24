@@ -44,15 +44,15 @@ export default function AboutMe() {
 
             <div className="flex flex-wrap justify-center gap-12 pt-8">
               <div className="group flex flex-col items-center">
-                <span className="text-3xl font-black tracking-tighter text-foreground  group-hover:text-primary-to transition-colors">Clean Code</span>
-                <span className="font-doto text-[10px] uppercase tracking-[0.3em] font-bold">My Standard</span>
+                <span className="text-3xl font-black tracking-tighter text-foreground group-hover:text-foreground/80 transition-colors">Clean Code</span>
+                <span className="font-doto text-[10px] uppercase tracking-[0.3em] font-bold text-foreground/60">My Standard</span>
               </div>
 
               <div className="w-[1px] h-12 bg-foreground/10 hidden md:block self-center" />
 
               <div className="group flex flex-col items-center">
-                <span className="text-3xl font-black text-foreground  tracking-tighter group-hover:text-primary-to transition-colors">Scalable UI</span>
-                <span className="font-doto text-[10px] uppercase tracking-[0.3em] text-primary-to/60 font-bold">My Focus</span>
+                <span className="text-3xl font-black text-foreground tracking-tighter group-hover:text-foreground/80 transition-colors">Scalable UI</span>
+                <span className="font-doto text-[10px] uppercase tracking-[0.3em] text-foreground/60 font-bold">My Focus</span>
               </div>
             </div>
           </motion.div>
