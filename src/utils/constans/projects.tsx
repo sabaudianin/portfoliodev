@@ -1,9 +1,17 @@
 export const projects = [
   {
+    title: "DevInsight",
+    image: "/projectsView/devinsight.avif",
+    description:
+      "Full-Stack Application: Next.js + Better Auth + AWS RDS. A developer productivity tool integrated with GitHub. This project bridges serverless architecture (Vercel) with cloud-native database solutions (AWS RDS). It features a complete authentication system, global state management with Zustand, and a scalable database schema, showcasing the ability to deploy complex, secure, and modern web applications.",
+    repo: "https://github.com/sabaudianin/app-prisma-betterAuth",
+    link: "https://app-prisma-better-auth.vercel.app/",
+  },
+  {
     title: "Ai Image Generator",
     image: "/projectsView/aiGen.avif",
     description:
-      "A high-performance image generation platform built with Next.js 16 (React 19) and Tailwind CSS 4. The application features a robust serverless architecture,Modal offloading heavy AI computations to  using Python. It includes a complete user dashboard, secure authentication via Better Auth, and persistent storage with Prisma ORM. Key Tech: Next.js 16, TypeScript, Python (Modal), Prisma, PostgreSQL, AWS S3.",
+      "A high-performance image generation platform built with Next.js and Tailwind. The application features a robust serverless architecture,Modal offloading heavy AI computations to  using Python. It includes a complete user dashboard, secure authentication via Better Auth, and persistent storage with Prisma ORM. Key Tech: Next.js 16, TypeScript, Python (Modal), Prisma, PostgreSQL, AWS S3.",
     repo: "https://github.com/sabaudianin/ai-image-generator-app",
     link: "https://ai-image-generator-app-one.vercel.app/",
   },
