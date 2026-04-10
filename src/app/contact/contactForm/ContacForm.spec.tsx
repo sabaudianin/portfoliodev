@@ -1,34 +1,44 @@
-import React from "react";
-import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import type { Mock } from "vitest";
 import { ContactForm } from "./ContactForm";
 
-describe("ContactForm Tests", () => {
-  const user = userEvent.setup();
-  it("render all form fields properly", async () => {
+global.fetch = vi.fn();
+
+describe("ContactForm Component", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  const mockFetchResponse = (ok: boolean, data: object) => {
+    (global.fetch as Mock).mockResolvedValue({
+      ok,
+      // trzeba symulować funkcję json() jako asynchroniczną
+      json: async () => data,
+    });
+  };
+
+  it("should handle server error message from API", async () => {
+    const user = userEvent.setup();
+    const errorMessage = "Email service is down";
+
+    // Mockujemy 500 z konkretnym body
+    mockFetchResponse(false, { message: errorMessage });
+
     render(<ContactForm />);
 
-    const submitBtn = screen.getByRole("button", { name: /Submit/i });
-    const nameInput = screen.getByPlaceholderText(/Name/i);
-    const emailInput = screen.getByPlaceholderText(/Email/i);
-    const messageInput = screen.getByPlaceholderText(
-      /Write your message here/i
-    );
+    // Wypełniamy formularz 
+    await user.type(screen.getByPlaceholderText(/name.../i), "Test User");
+    await user.type(screen.getByPlaceholderText(/email.../i), "test@test.com");
+    await user.type(screen.getByPlaceholderText(/write your message here/i), "Message content");
 
-    expect(nameInput).toBeInTheDocument();
-    expect(emailInput).toBeInTheDocument();
-    expect(messageInput).toBeInTheDocument();
-    expect(submitBtn).toBeInTheDocument();
-
-    await user.type(nameInput, "John Doe");
-    await user.type(emailInput, "jd@xx.com");
-    await user.type(messageInput, "Hello this is a test message.");
+    const submitBtn = screen.getByRole("button", { name: /submit message/i });
     await user.click(submitBtn);
 
-    const successMessage = await screen.findByText(
-      "Message sent successfully!"
-    );
-    expect(successMessage).toBeInTheDocument();
+
+    const serverErrorElement = await screen.findByText(errorMessage);
+    expect(serverErrorElement).toBeInTheDocument();
+    expect(serverErrorElement).toHaveClass("text-red-400");
   });
 });
