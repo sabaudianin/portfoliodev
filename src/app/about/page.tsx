@@ -1,7 +1,7 @@
 'use client'
 
 import { TechSkills } from "./TechSkills/TechSkills";
-import { Education } from "./education/Eductaion";
+import { Education } from "./education/Education";
 import { Experience } from "./experience/Experience";
 import { Certificats } from "./certificats/Certificats";
 import { motion } from "framer-motion";
