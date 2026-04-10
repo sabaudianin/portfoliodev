@@ -1,33 +1,53 @@
-import { render, screen } from "@testing-library/react";
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { render, act } from "@testing-library/react";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import Typewriter from "./Typewriter";
 
-describe("Typewriter component", () => {
-  const text = "Hello World!";
+const SPEED = 150;
 
+describe("Typewriter Component", () => {
   beforeEach(() => {
     vi.useFakeTimers();
   });
 
-  it("should start with empty text and show cursor", () => {
-    render(<Typewriter text={text} />);
-    expect(screen.getByText("|")).toBeInTheDocument();
-    expect(screen.getByText("|").previousSibling?.textContent).toBe("");
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
-  it("should type each character over time", () => {
-    render(<Typewriter text={text} />);
+  const getTypedText = (container: HTMLElement) =>
+    container.querySelector(".bg-clip-text")?.textContent;
 
-    for (let i = 0; i < text.length; i++) {
-      vi.advanceTimersByTime(200);
-      const typed = text.slice(0, i + 1);
-      expect(screen.getByText("|").previousSibling?.textContent).toBe(typed);
+  it("should type text character by character and finish correctly", async () => {
+    const text = "Dev";
+    const { container } = render(<Typewriter text={text} />);
+
+
+    expect(getTypedText(container)).toBe("");
+
+
+    for (let i = 1; i <= text.length; i++) {
+      await act(async () => {
+        await vi.advanceTimersByTimeAsync(SPEED);
+      });
+      expect(getTypedText(container)).toBe(text.slice(0, i));
     }
+
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(SPEED);
+    });
+    expect(getTypedText(container)).toBe(text);
   });
 
-  it("should stop after full text is displayed", () => {
-    render(<Typewriter text={text} />);
-    vi.advanceTimersByTime(200 * text.length);
-    expect(screen.getByText("|").previousSibling?.textContent).toBe(text);
+  it("should render cursor with correct styles", () => {
+    const { container } = render(<Typewriter text="Test" />);
+    const cursor = container.querySelector(".animate-pulse");
+
+    expect(cursor).toBeInTheDocument();
+    expect(cursor).toHaveClass("bg-cyan-400");
+  });
+
+  it("should handle empty string", () => {
+    const { container } = render(<Typewriter text="" />);
+    expect(getTypedText(container)).toBe("");
   });
 });
