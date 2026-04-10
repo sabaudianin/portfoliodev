@@ -1,28 +1,58 @@
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { Experience } from "./Experience";
 
-describe("Experience component", () => {
-  it("renders the section title", () => {
+
+//typy dla mocka 
+type MockProps = {
+  children: ReactNode;
+};
+// 1. Mockowanie Framer Motion (rozszerzone o viewport)
+vi.mock("framer-motion", () => ({
+  motion: {
+    // Używamy ComponentPropsWithoutRef, aby mock przyjmował to, co zwykły div/h2
+    div: ({ children, ...props }: ComponentPropsWithoutRef<"div">) => (
+      <div {...props}>{children}</div>
+    ),
+    h2: ({ children, ...props }: ComponentPropsWithoutRef<"h2">) => (
+      <h2 {...props}>{children}</h2>
+    ),
+  },
+  AnimatePresence: ({ children }: MockProps) => <>{children}</>,
+}));
+
+// 2. Mockowanie SectionWrapper 
+vi.mock("@/ui/sectionWrapper/sectionWrapper", () => ({
+  SectionWrapper: ({ children, id }: { children: ReactNode; id?: string }) => (
+    <section id={id}>{children}</section>
+  ),
+}));
+describe("Experience Component", () => {
+  it("should render the section with correct title", () => {
     render(<Experience />);
-    expect(screen.getByText(/Experience Timeline/i)).toBeInTheDocument();
+    const title = screen.getByRole("heading", { name: /professional journey/i });
+    expect(title).toBeInTheDocument();
   });
 
-  it("renders all job positions", () => {
+  it("should display all professional roles from data", () => {
     render(<Experience />);
+
+    expect(screen.getByText("Frontend / Full-Stack Developer")).toBeInTheDocument();
     expect(screen.getByText("Warehouse Manager")).toBeInTheDocument();
-    expect(screen.getByText("Team Supervisor")).toBeInTheDocument();
   });
 
-  it("renders correct number of experience bullets", () => {
+  it("should show 'current' status badge only for active roles", () => {
     render(<Experience />);
-    const items = screen.getAllByRole("listitem");
-    expect(items.length).toBeGreaterThan(4);
+
+    const currentBadges = screen.getAllByText(/Present/i);
+    expect(currentBadges.length).toBeGreaterThan(0);
   });
 
-  it("renders timeline markers", () => {
+  it("should render list of responsibilities for each job", () => {
     render(<Experience />);
-    const markers = document.querySelectorAll("div.bg-blue-500");
-    expect(markers.length).toBe(2);
+    const listItems = screen.getAllByRole("listitem");
+
+    expect(listItems).toHaveLength(11);
   });
 });
