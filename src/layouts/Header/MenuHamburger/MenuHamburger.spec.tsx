@@ -1,9 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, it, expect, vi, beforeEach, Mock } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import type { Mock } from "vitest";
 import { MenuHamburger } from "./MenuHamburger";
 import { usePathname } from "next/navigation";
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 // 1. Mockowanie Next Navigation
 vi.mock("next/navigation", () => ({
@@ -18,7 +19,7 @@ vi.mock("../../../types/navlinks", () => ({
     ],
 }));
 
-// 2. Mockowanie Framer Motion (Zero Any)
+// 2. Mockowanie Framer Motion
 vi.mock("framer-motion", () => ({
     motion: {
         div: ({ children, ...props }: ComponentPropsWithoutRef<"div">) => <div {...props}>{children}</div>,
@@ -47,8 +48,6 @@ describe("MenuHamburger Component", () => {
 
     it("should be closed by default", () => {
         render(<MenuHamburger />);
-
-        // Nawigacja nie powinna być w dokumencie (ponieważ AnimatePresence i isOpen = false)
         expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
     });
 
@@ -58,7 +57,6 @@ describe("MenuHamburger Component", () => {
         const button = screen.getByRole("button");
         await user.click(button);
 
-        // Po kliknięciu nawigacja powinna się pojawić
         expect(screen.getByRole("navigation")).toBeInTheDocument();
         expect(screen.getByText("Home")).toBeInTheDocument();
         expect(screen.getByText("Projects")).toBeInTheDocument();
@@ -67,15 +65,12 @@ describe("MenuHamburger Component", () => {
     it("should close the menu when clicking a link", async () => {
         render(<MenuHamburger />);
 
-        // Otwieramy menu
         const button = screen.getByRole("button");
         await user.click(button);
 
-        // Klikamy w link
         const link = screen.getByText("Projects");
         await user.click(link);
 
-        // Menu powinno zniknąć
         expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
     });
 
@@ -84,13 +79,10 @@ describe("MenuHamburger Component", () => {
 
         const button = screen.getByRole("button");
 
-        // Przed kliknięciem szukamy ikony Menu (możesz dodać test-id do ikon dla pewności)
-        // Albo sprawdzić czy CloseIcon nie istnieje
         expect(container.querySelector("svg")).toBeInTheDocument();
 
         await user.click(button);
-        // Po kliknięciu stan się zmienia - ikona CloseIcon jest renderowana
-        // Jeśli Twoje ikony mają specyficzne klasy lub nazwy, sprawdź je tutaj
+
     });
 
     it("should highlight the active link based on pathname", async () => {
@@ -103,9 +95,9 @@ describe("MenuHamburger Component", () => {
         const projectsLink = screen.getByText("Projects");
         const homeLink = screen.getByText("Home");
 
-        // Projects jest aktywne -> klasa text-cyan-400
+
         expect(projectsLink).toHaveClass("text-cyan-400");
-        // Home nie jest aktywne -> klasa text-white
+
         expect(homeLink).toHaveClass("text-white");
     });
 });
