@@ -4,7 +4,7 @@ import AboutMe from "./page";
 import type { ComponentPropsWithoutRef } from "react";
 
 // 1. (Integration isolation)
-// Zamiast renderować całą logikę proste placeholdery
+// Zamiast renderować  full logike placeholdery
 vi.mock("./TechSkills/TechSkills", () => ({
   TechSkills: () => <div data-testid="tech-skills-section" />
 }));
