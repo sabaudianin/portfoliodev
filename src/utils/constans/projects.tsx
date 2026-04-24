@@ -16,6 +16,14 @@ export const projects = [
     link: "https://ai-image-generator-app-one.vercel.app/",
   },
   {
+    title: "WebDev Landing Page",
+    image: "/projectsView/devpage.avif",
+    description:
+      "Serverless contact system using Next.js and TypeScript. Integrated Resend for reliable email delivery and Upstash Redis for professional-grade rate limiting. Features a multi-layered spam defense with Zod validation and a stealth honeypot, ensuring a secure and seamless user experience.",
+    repo: "https://github.com/sabaudianin/dev-landing-page",
+    link: "https://dev-landing-page-murex.vercel.app/",
+  },
+  {
     title: "BarberShop",
     image: "/projectsView/barberview.avif",
     description:
