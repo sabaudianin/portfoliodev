@@ -48,7 +48,8 @@
   },
   "optionalDependencies": {
     "lightningcss-linux-x64-gnu": "1.29.3",
-    "lightningcss-linux-x64-musl": "1.29.3"
+    "lightningcss-linux-x64-musl": "1.29.3",
+    "@tailwindcss/oxide-linux-x64-gnu": "*"
   },
   "overrides": {
     "lightningcss": "1.29.3"
