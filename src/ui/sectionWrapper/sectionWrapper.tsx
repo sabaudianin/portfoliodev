@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 interface SectionWrapperProps {
     children: ReactNode;
-    id: string;               // Musi pasować do linków w navlinks.ts (np. "about", "skills")
+    id: string;
     className?: string;
     glowColor?: "blue" | "cyan" | "purple";
 }
