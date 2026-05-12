@@ -7,10 +7,10 @@ export const Education = () => {
   const educationData = [
     {
       school: "Wyższa Szkoła Kształcenia Zawodowego",
-      date: "2025 - ongoing",
+      date: "2025 - 2026",
       degree: "Postgraduate studies",
       field: ".NET (C#) Backend Development",
-      current: true,
+      current: false,
     },
     {
       school: "CodersLab School IT",
