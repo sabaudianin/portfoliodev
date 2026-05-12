@@ -10,7 +10,7 @@ export default function Contact() {
 
       <div className="w-full max-w-2xl space-y-12">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter bg-gradient-to-b from-foreground to-foreground/40  bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter bg-gradient-to-b from-foreground to-foreground/40 bg-clip-text">
             Let&apos;s Contact
           </h1>
           <p className="max-w-xl mx-auto text-foreground/70 font-medium leading-relaxed">

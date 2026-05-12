@@ -4,6 +4,9 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { features } from "@/utils/constans/features";
+import {
+  titleVariants,
+} from "@/ui/motion/motionVariants";
 
 type Feature = {
   title: string;
@@ -14,22 +17,19 @@ type Feature = {
 
 export const Features = () => {
 
-
   return (
     <section
       aria-labelledby="features-heading"
       className="w-full py-16 relative overflow-hidden"
     >
-
       <div className="absolute top-0 lg:top-10 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
 
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
             id="features-heading"
-            className="text-4xl font-black tracking-tight lg:text-5xl bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent uppercase">
+            className="text-3xl md:text-4xl font-black tracking-tighter uppercase pb-4"
+            variants={titleVariants}>
             Quick Snapshot
           </motion.h2>
           <p className="text-gray-400 font-doto text-sm md:text-base">
@@ -59,7 +59,7 @@ export const Features = () => {
 
                   <article className="relative z-10 flex flex-col h-full">
 
-                    <div className="self-center mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-foreground/10 to-foreground/5 text-cyan-400 group-hover:scale-110 group-hover:text-foreground transition-all duration-500 shadow-xl border border-foreground/5">
+                    <div className="self-center mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-foreground/10 to-foreground/5 text-cyan-400 group-hover:scale-110 group-hover:text-foreground transition-all duration-500 shadow-xl">
                       <span className="text-3xl">{feature.icon}</span>
                     </div>
 

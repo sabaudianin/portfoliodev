@@ -18,7 +18,7 @@ export const features = [
           <br />• WSKZ Postgraduates Studies - <b>
             Backend Developer .NET(C#){" "}
           </b>{" "}
-          <span className="text-xs">(2025-ongoing)</span>
+          <span className="text-xs">(2025-2026)</span>
 
         </div>
       </>,

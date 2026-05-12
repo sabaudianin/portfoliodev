@@ -27,7 +27,7 @@ export const projects = [
     title: "Saas Template",
     image: "/projectsView/saasTemp.avif",
     description:
-      " This full-stack SaaS foundation, it's ready starting point for any SaaS project, built with Next.js, designed for rapid development and scalability. This template provides all the boring plumbing—auth, database, and styling—so you can focus on building your core features. Authentication by NextAuth, Database Prisma ORM connected to Postgresql by Neon, Email infrastructure with Resend, Dark Mode, Optimized for Vercel Deployment",
+      " This full-stack SaaS foundation, it's ready starting point for any SaaS project, built with Next.js, designed for rapid development and scalability. This template provides all the boring part: auth, database, and styling so you can focus on building your core features. Authentication by NextAuth, Database by Prisma ORM connected to Postgresql via Neon, Email infrastructure with Resend, Dark Mode, Optimized for Vercel Deployment",
     repo: "https://github.com/sabaudianin/starter-template-next",
     link: "https://starter-template-next.vercel.app/",
   },

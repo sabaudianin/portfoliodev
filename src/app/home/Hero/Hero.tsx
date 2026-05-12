@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative w-full  overflow-hidden px-6">
-
-
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         {/* Lewa */}
