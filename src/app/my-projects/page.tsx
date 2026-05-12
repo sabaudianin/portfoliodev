@@ -13,9 +13,9 @@ export default function Projects() {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-16 text-center bg-gradient-to-b from-foreground to-foreground/40  bg-clip-text text-transparent"
+        className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-16 text-center"
       >
-        Featured <span className="text-primary-to">Projects</span>
+        Featured Projects
       </motion.h2>
 
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
